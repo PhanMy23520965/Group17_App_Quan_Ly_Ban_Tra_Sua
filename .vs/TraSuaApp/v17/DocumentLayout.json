@@ -1,0 +1,146 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|TraSuaApp.csproj|d:\\hk4\\ltm\\group17_app_quan_ly_ban_tra_sua\\models\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|TraSuaApp.csproj|solutionrelative:models\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|ProjectNT106.csproj|D:\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\models\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|ProjectNT106.csproj|solutionrelative:models\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|TraSuaApp.csproj|d:\\hk4\\ltm\\group17_app_quan_ly_ban_tra_sua\\gui\\uc_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|TraSuaApp.csproj|solutionrelative:gui\\uc_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|ProjectNT106.csproj|D:\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\gui\\uc_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|ProjectNT106.csproj|solutionrelative:gui\\uc_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|ProjectNT106.csproj|D:\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|ProjectNT106.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|GD.csproj|D:\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\gui\\temp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|GD.csproj|solutionrelative:gui\\temp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|GD.csproj|D:\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\gui\\temp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|GD.csproj|solutionrelative:gui\\temp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SanPham.cs",
+              "DocumentMoniker": "D:\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\Models\\SanPham.cs",
+              "RelativeDocumentMoniker": "Models\\SanPham.cs",
+              "ToolTip": "D:\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\Models\\SanPham.cs",
+              "RelativeToolTip": "Models\\SanPham.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T10:19:57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T08:57:31.851Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SanPham.cs",
+              "DocumentMoniker": "D:\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\Models\\SanPham.cs",
+              "RelativeDocumentMoniker": "Models\\SanPham.cs",
+              "ToolTip": "D:\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\Models\\SanPham.cs",
+              "RelativeToolTip": "Models\\SanPham.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T09:09:24.057Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UC_Menu.cs",
+              "DocumentMoniker": "D:\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\GUI\\UC_Menu.cs",
+              "RelativeDocumentMoniker": "GUI\\UC_Menu.cs",
+              "ToolTip": "D:\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\GUI\\UC_Menu.cs",
+              "RelativeToolTip": "GUI\\UC_Menu.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAAAAwEYAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T08:46:58.897Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UC_Menu.cs [Design]",
+              "DocumentMoniker": "D:\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\GUI\\UC_Menu.cs",
+              "RelativeDocumentMoniker": "GUI\\UC_Menu.cs",
+              "ToolTip": "D:\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\GUI\\UC_Menu.cs [Design]",
+              "RelativeToolTip": "GUI\\UC_Menu.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T08:46:50.91Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Temp.cs [Design]",
+              "DocumentMoniker": "D:\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\GUI\\Temp.cs",
+              "RelativeDocumentMoniker": "GUI\\Temp.cs",
+              "ToolTip": "D:\\HK4\\LTM\\DA\\GD\\GUI\\Temp.cs [Design]",
+              "RelativeToolTip": "..\\DA\\GD\\GUI\\Temp.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-19T13:26:21.564Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Temp.cs",
+              "DocumentMoniker": "D:\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\GUI\\Temp.cs",
+              "RelativeDocumentMoniker": "GUI\\Temp.cs",
+              "ToolTip": "D:\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\GUI\\Temp.cs",
+              "RelativeToolTip": "GUI\\Temp.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAuwBUAAADuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-19T14:13:59.993Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
