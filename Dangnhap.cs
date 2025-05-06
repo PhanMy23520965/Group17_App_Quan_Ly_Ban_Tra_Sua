@@ -88,7 +88,7 @@ namespace TraSuaApp
             try
             {
                 // Sử dụng Firebase để xác thực người dùng
-                var authProvider = new FirebaseAuthProvider(new FirebaseConfig("AIzaSyAQKaZZ7DQw2ktZ_2sFaQsi_f0oJRbm_1o")); 
+                var authProvider = new FirebaseAuthProvider(new FirebaseConfig("APIKey")); 
                 var auth = await authProvider.SignInWithEmailAndPasswordAsync(email, matKhau);
 
                 // Kiểm tra xem người dùng có đăng nhập thành công không
