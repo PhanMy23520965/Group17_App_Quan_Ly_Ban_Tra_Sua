@@ -27,7 +27,7 @@ namespace TraSuaApp
             InitializeComponent();
         }
 
-        private const string ApiKey = "AIzaSyAQKaZZ7DQw2ktZ_2sFaQsi_f0oJRbm_1o";
+        private const string ApiKey = "APIKey";
 
         private async void btnDangKy_Click(object sender, EventArgs e)
         {
