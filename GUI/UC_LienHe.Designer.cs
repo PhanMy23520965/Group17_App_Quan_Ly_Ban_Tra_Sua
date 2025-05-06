@@ -1,4 +1,4 @@
-﻿namespace GD
+﻿namespace TraSuaApp
 {
     partial class UC_LienHe
     {
@@ -28,28 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbShopee = new System.Windows.Forms.TextBox();
             this.lbShoppe = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbSDT = new System.Windows.Forms.TextBox();
             this.lbPhone = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.tbDC = new System.Windows.Forms.TextBox();
+            this.tbFB = new System.Windows.Forms.TextBox();
             this.lbAddress = new System.Windows.Forms.Label();
             this.lbFacebook = new System.Windows.Forms.Label();
             this.lbContactInfo = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbIG = new System.Windows.Forms.TextBox();
             this.lbInstagram = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // tbShopee
             // 
-            this.textBox1.Location = new System.Drawing.Point(264, 318);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(311, 22);
-            this.textBox1.TabIndex = 56;
+            this.tbShopee.Location = new System.Drawing.Point(264, 318);
+            this.tbShopee.Name = "tbShopee";
+            this.tbShopee.Size = new System.Drawing.Size(311, 22);
+            this.tbShopee.TabIndex = 56;
             // 
             // lbShoppe
             // 
@@ -59,14 +59,14 @@
             this.lbShoppe.Name = "lbShoppe";
             this.lbShoppe.Size = new System.Drawing.Size(175, 28);
             this.lbShoppe.TabIndex = 57;
-            this.lbShoppe.Text = "Shoppe Food";
+            this.lbShoppe.Text = "Shopee Food";
             // 
-            // textBox3
+            // tbSDT
             // 
-            this.textBox3.Location = new System.Drawing.Point(264, 178);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(311, 22);
-            this.textBox3.TabIndex = 54;
+            this.tbSDT.Location = new System.Drawing.Point(264, 178);
+            this.tbSDT.Name = "tbSDT";
+            this.tbSDT.Size = new System.Drawing.Size(311, 22);
+            this.tbSDT.TabIndex = 54;
             // 
             // lbPhone
             // 
@@ -78,19 +78,19 @@
             this.lbPhone.TabIndex = 55;
             this.lbPhone.Text = "Số điện thoại";
             // 
-            // textBox4
+            // tbDC
             // 
-            this.textBox4.Location = new System.Drawing.Point(264, 366);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(311, 22);
-            this.textBox4.TabIndex = 52;
+            this.tbDC.Location = new System.Drawing.Point(264, 366);
+            this.tbDC.Name = "tbDC";
+            this.tbDC.Size = new System.Drawing.Size(311, 22);
+            this.tbDC.TabIndex = 52;
             // 
-            // textBox5
+            // tbFB
             // 
-            this.textBox5.Location = new System.Drawing.Point(264, 224);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(311, 22);
-            this.textBox5.TabIndex = 50;
+            this.tbFB.Location = new System.Drawing.Point(264, 224);
+            this.tbFB.Name = "tbFB";
+            this.tbFB.Size = new System.Drawing.Size(311, 22);
+            this.tbFB.TabIndex = 50;
             // 
             // lbAddress
             // 
@@ -123,12 +123,12 @@
             this.lbContactInfo.TabIndex = 58;
             this.lbContactInfo.Text = "Thông tin liên hệ";
             // 
-            // textBox2
+            // tbIG
             // 
-            this.textBox2.Location = new System.Drawing.Point(264, 271);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(311, 22);
-            this.textBox2.TabIndex = 59;
+            this.tbIG.Location = new System.Drawing.Point(264, 271);
+            this.tbIG.Name = "tbIG";
+            this.tbIG.Size = new System.Drawing.Size(311, 22);
+            this.tbIG.TabIndex = 59;
             // 
             // lbInstagram
             // 
@@ -150,20 +150,22 @@
             this.btnUpdate.TabIndex = 61;
             this.btnUpdate.Text = "Cập nhật";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Bisque;
-            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.tbSDT);
             this.panel1.Controls.Add(this.btnUpdate);
             this.panel1.Controls.Add(this.lbFacebook);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.tbIG);
             this.panel1.Controls.Add(this.lbAddress);
             this.panel1.Controls.Add(this.lbInstagram);
-            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.tbFB);
             this.panel1.Controls.Add(this.lbContactInfo);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.tbDC);
+            this.panel1.Controls.Add(this.tbShopee);
             this.panel1.Controls.Add(this.lbPhone);
             this.panel1.Controls.Add(this.lbShoppe);
             this.panel1.Location = new System.Drawing.Point(252, 63);
@@ -178,7 +180,7 @@
             this.BackColor = System.Drawing.Color.Bisque;
             this.Controls.Add(this.panel1);
             this.Name = "UC_LienHe";
-            this.Size = new System.Drawing.Size(1139, 754);
+            this.Size = new System.Drawing.Size(1139, 723);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -187,16 +189,16 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbShopee;
         private System.Windows.Forms.Label lbShoppe;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbSDT;
         private System.Windows.Forms.Label lbPhone;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox tbDC;
+        private System.Windows.Forms.TextBox tbFB;
         private System.Windows.Forms.Label lbAddress;
         private System.Windows.Forms.Label lbFacebook;
         private System.Windows.Forms.Label lbContactInfo;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbIG;
         private System.Windows.Forms.Label lbInstagram;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Panel panel1;

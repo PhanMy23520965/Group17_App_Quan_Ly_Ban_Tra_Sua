@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Google.Cloud.Firestore;
+using Models.Admin;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,31 +10,201 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TraSuaApp.Services;
+using static System.Net.Mime.MediaTypeNames;
 
-namespace GD
+namespace TraSuaApp
 {
     public partial class UC_Ban : UserControl
     {
+        string collectionName = "Ban";
+        string subCollectionName = "ChiTietBan";
+        FirestoreDb db = DBServices.Connect();
+
         public UC_Ban()
         {
             InitializeComponent();
-            LoadBan();
+            Init();
+            Listen();
         }
-        private void LoadBan()
+        private void Init()
         {
-            /*dgvBaverage.RowHeadersVisible = false; // Ẩn cột chọn hàng đầu tiên
-            dgvBaverage.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; // Cột giãn tự động
+            string[] TableStatus = { "Trống", "Đã đặt" };
+            cbTrangThaiBan.Items.AddRange(TableStatus);
 
+            string[] OrderStatus = { "Chờ xác nhận", "Xác nhận", "Hủy" };
+            cbTrangThaiDatBan.Items.AddRange(OrderStatus);
+        }
 
-            // Tạo cột cho DataGridView
-            dgvBaverage.Columns.Add("TenDoUong", "Tên đồ uống");
-            dgvBaverage.Columns.Add("SoLuong", "Số lượng");
+        public void Listen()
+        {
+            // Lắng nghe
+            db.Collection(collectionName).Listen(snapshot =>
+            {
+                List<Ban> danhSach = new List<Ban>();
+                foreach (DocumentSnapshot document in snapshot.Documents)
+                {
+                    Ban obj = document.ConvertTo<Ban>();
+                    danhSach.Add(obj);
+                }
 
-            // Thêm dữ liệu mẫu
-            dgvBaverage.Rows.Add("Trà sữa trân châu", 2);
-            dgvBaverage.Rows.Add("Matcha", 4);
-            dgvBaverage.Rows.Add("Coffee sữa", 1);
-            dgvBaverage.Rows.Add("Trà thảo mộc", 2);*/
+                // Cập nhật lại DataGridView
+                flpBan.Invoke(new Action(() =>
+                {
+                    // Xóa bàn
+                    foreach (Control control in flpBan.Controls.OfType<Button>().ToList())
+                    {
+                        flpBan.Controls.Remove(control);
+                        control.Dispose();
+                    }
+
+                    // Tạo bàn 
+                    foreach (Ban table in danhSach)
+                        createTableCell(table);
+                }));
+
+                // setHeader();
+            });
+
+        }
+        public void setHeader()
+        {
+            dgvCTBan.Invoke(new Action(() =>
+            {
+                dgvCTBan.Columns["ID"].HeaderText = "Mã CTDB";
+                dgvCTBan.Columns["MaBan"].HeaderText = "Mã bàn";
+                dgvCTBan.Columns["MaKH"].HeaderText = "Mã KH";
+                dgvCTBan.Columns["SoNguoi"].HeaderText = "Số người";
+                dgvCTBan.Columns["ThoiGianDB"].HeaderText = "Thời gian đặt";
+                dgvCTBan.Columns["TrangThaiDB"].HeaderText = "Trạng thái";
+            }));
+        }
+
+        private void createTableCell(Ban Table)
+        {
+            // Tạo danh sách bàn 
+
+            Button btn = new Button();
+
+            // Thiết lập nội dung và giao diện
+            btn.Font = new Font("Arial", 8); // FontStyle.Bold
+            btn.Text = $"Bàn {Table.ID}\nSức chứa: {Table.SucChua}\n({Table.TrangThai})";
+            btn.Size = new Size(85, 80);
+            btn.ForeColor = Color.Black;
+            btn.TextAlign = ContentAlignment.MiddleCenter;
+
+            btn.BackColor = Table.TrangThai.Trim() == "Trống" ? Color.Orange : Color.Red;
+
+            // Thiết lập hành vi click
+            btn.Click += (s, e) =>
+            {
+                tbMaBan.Text = Table.ID;
+                tbSucChua.Text = Table.SucChua.ToString();
+                cbTrangThaiBan.Text = Table.TrangThai;
+
+                // Chi tiet ban
+                FirestoreDb db = DBServices.Connect();
+                db.Collection(collectionName).Document(tbMaBan.Text.ToString()).Collection(subCollectionName).Listen(snapshot =>
+                {
+                    List<DatBan> danhSach = new List<DatBan>();
+                    foreach (DocumentSnapshot document in snapshot.Documents)
+                    {
+                        DatBan obj = document.ConvertTo<DatBan>();
+                        danhSach.Add(obj);
+                    }
+
+                    // Cập nhật lại DataGridView
+                    dgvCTBan.Invoke(new Action(() =>
+                    {
+                        dgvCTBan.DataSource = null; // Clear cũ
+                        dgvCTBan.DataSource = danhSach; // Gán danh sách mới
+                    }));
+                });
+            };
+
+            // Thêm vào FlowLayoutPanel
+            flpBan.Controls.Add(btn);
+        }
+
+        private Ban createTable()
+        {
+            try
+            {
+                Ban sp = new Ban
+                {
+                    SucChua = int.Parse(tbSucChua.Text),
+                    TrangThai = cbTrangThaiBan.Text.Trim(),
+                };
+                return sp;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        //
+        private async void btnInsert_Click(object sender, EventArgs e)
+        {
+            await DBServices.POST(createTable(), collectionName, tbMaBan.Text.Trim());
+        }
+
+        private async void btnUpdate_Click(object sender, EventArgs e)
+        {
+            await DBServices.PUT(createTable(), collectionName, tbMaBan.Text.Trim());
+        }
+
+        private async void btnDelete_Click(object sender, EventArgs e)
+        {
+            await DBServices.DELETE(collectionName, tbMaBan.Text.Trim());
+        }
+
+        private async void btnSearch_Click(object sender, EventArgs e)
+        {
+            List<DatBan> list = await DBServices.GET<DatBan>(tbSearch.Text.Trim(), collectionName, tbMaBan.Text, subCollectionName);
+
+            if (list == null) return;
+
+            // Xóa dữ liệu từ gridview
+            dgvCTBan.DataSource = null;
+            // Cập nhật dữ liệu 
+            dgvCTBan.DataSource = list;
+
+            // setHeader();
+        }
+
+        private void btnUpdateDetail_Click(object sender, EventArgs e)
+        {
+            DocumentReference doc = db.Collection(collectionName).Document(tbMaBan.Text).
+                                    Collection(subCollectionName).Document(tbMaDB.Text);
+
+            if(doc != null)
+            {
+                var updates = new Dictionary<string, object>
+                {
+                    { "TrangThaiDB", cbTrangThaiDatBan.Text.ToString() }
+                };
+
+                doc.UpdateAsync(updates);
+            }
+        }
+
+        private void dgvCTBan_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.RowIndex >= 0)
+                {
+                    DataGridViewRow row = dgvCTBan.Rows[e.RowIndex];
+
+                    tbMaDB.Text = row.Cells["ID"].Value?.ToString();
+                    cbTrangThaiDatBan.Text = row.Cells["TrangThaiDB"].Value?.ToString();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Failed");
+            }
         }
     }
 }

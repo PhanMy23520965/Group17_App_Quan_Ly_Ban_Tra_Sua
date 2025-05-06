@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,77 +11,128 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Google.Cloud.Firestore;
 using Google.Cloud.Firestore.V1;
-using Models;
+using Models.Admin;
+using TraSuaApp.Services;
 
-namespace GD
+namespace TraSuaApp
 {
     public partial class UC_Menu : UserControl
     {
-        
+        string collectionName = "SanPham";
 
         public UC_Menu()
         {
             InitializeComponent();
-            LoadDanhSachSanPham();
+            Listen();
         }
 
-        private void LoadDanhSachSanPham()
+        public void setProductHeader()
         {
-            /*dgvMenu.RowHeadersVisible = false; // Ẩn cột chọn hàng đầu tiên
-            dgvMenu.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; // Cột giãn tự động
-
-            // Tạo cột cho DataGridView
-            dgvMenu.Columns.Add("MaSP", "Mã Sản Phẩm");
-            dgvMenu.Columns.Add("TenSP", "Tên Sản Phẩm");
-            dgvMenu.Columns.Add("Gia", "Giá");
-            dgvMenu.Columns.Add("LoaiSP", "Loại");
-            dgvMenu.Columns.Add("TrangThai", "Trạng Thái");
-            dgvMenu.Columns.Add("HinhAnh", "Hình ảnh");
-
-            // Thêm một số dòng dữ liệu mẫu
-            dgvMenu.Rows.Add("SP001", "Cà phê đen", 10000, "Cà Phê", "Còn hàng", "");
-            dgvMenu.Rows.Add("SP002", "Cà phê sữa", 12000, "Cà Phê", "Còn hàng", "");
-            dgvMenu.Rows.Add("SP003", "Bạc xỉu", 15000, "Cà Phê", "Còn hàng", "");
-            dgvMenu.Rows.Add("SP004", "Cam vắt", 10000, "Nước ép", "Còn hàng", "");
-            dgvMenu.Rows.Add("SP005", "Trà Sữa Truyền Thống", 30000, "Đồ uống", "Còn hàng", "");
-            dgvMenu.Rows.Add("SP006", "Trà Đào", 35000, "Đồ uống", "Hết hàng", "");*/
+            dgvMenu.Columns["ID"].HeaderText = "Mã sản phẩm";
+            dgvMenu.Columns["TenSP"].HeaderText = "Tên sản phẩm";
+            dgvMenu.Columns["Gia"].HeaderText = "Giá bán";
+            dgvMenu.Columns["LoaiSP"].HeaderText = "Loại";
+            dgvMenu.Columns["TrangThai"].HeaderText = "Trạng thái";
+            dgvMenu.Columns["HinhAnh"].HeaderText = "Hình ảnh";
         }
 
-        private void btnSearchMenu_Click(object sender, EventArgs e)
+        public void Listen()
         {
+            // Lắng nghe
+            FirestoreDb db = DBServices.Connect();
+            db.Collection(collectionName).Listen(snapshot =>
+            {
+                List<SanPham> danhSach = new List<SanPham>();
+                foreach (DocumentSnapshot document in snapshot.Documents)
+                {
+                    SanPham obj = document.ConvertTo<SanPham>();
+
+                    danhSach.Add(obj);
+                }
+
+                // Cập nhật lại DataGridView
+                dgvMenu.Invoke(new Action(() =>
+                {
+                    dgvMenu.DataSource = null; // Clear cũ
+                    dgvMenu.DataSource = danhSach; // Gán danh sách mới
+                }));
+
+                // Table Header
+                setProductHeader();
+            });
 
         }
 
+        private void dgvMenu_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            // RowIndex: Số thứ tự của hàng được click
+            // Đảm bảo không click vào tiêu đề cột (RowIndex = -1)
+            // SelectionMode: FullRowSelect
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvMenu.Rows[e.RowIndex];
+
+                tbProductID.Text = row.Cells["ID"].Value?.ToString();
+                tbProductName.Text = row.Cells["TenSP"].Value?.ToString();
+                tbPrice.Text = row.Cells["Gia"].Value?.ToString();
+                tbType.Text = row.Cells["LoaiSP"].Value?.ToString();
+                tbStatus.Text = row.Cells["TrangThai"].Value?.ToString();
+                tbImage.Text = row.Cells["HinhAnh"].Value?.ToString();
+            }
+        }
+
+
+        private SanPham createProduct()
+        {
+            try
+            {
+                SanPham sp = new SanPham
+                {
+                    TenSP = tbProductName.Text.Trim(),
+                    Gia = int.Parse(tbPrice.Text),
+                    LoaiSP = tbType.Text.Trim(),
+                    TrangThai = tbStatus.Text.Trim(),
+                    HinhAnh = tbImage.Text.Trim()
+                };
+                return sp;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        // 
         private async void btnInsert_Click(object sender, EventArgs e)
         {
-            // B1: Kết nối Firestore
-            string jsonPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "firebase-adminsdk.json");
-            FirestoreDb db = FirestoreDb.Create("quan-ly-quan-tra", new FirestoreClientBuilder
-            {
-                CredentialsPath = "Resources\\firebase-adminsdk.json"
-            }.Build());
+            await DBServices.POST(createProduct(), collectionName, tbProductID.Text.Trim());
+        }
 
-            // B1: Tạo object
-            SanPham sp = new SanPham
-            {
-                TenSP = tbProductName.Text.Trim(),
-                Gia = decimal.Parse(tbPrice.Text),
-                Loai = tbType.Text.Trim(),
-                TrangThai = tbStatus.Text.Trim(),
-                HinhAnh = tbImage.Text.Trim()
-            };
+        private async void btnUpdate_Click(object sender, EventArgs e)
+        {
+            await DBServices.PUT(createProduct(), collectionName, tbProductID.Text.Trim());
+        }
 
-            // B2: Gửi lên Firestore như 1 POST
-            // Truy cập collection "products"
-            CollectionReference collection = db.Collection("SanPham");
+        private async void btnDelete_Click(object sender, EventArgs e)
+        {
+            await DBServices.DELETE(collectionName, tbProductID.Text.Trim());
+        }
 
-            // Thiết lập ID thủ công
-            DocumentReference docRef = collection.Document(tbProductID.Text.Trim());
+        private async void btnSearch_Click(object sender, EventArgs e)
+        {
+            List<SanPham> list = await DBServices.GET<SanPham>(tbSearch.Text.Trim(), collectionName);
 
-            // Thêm tài liệu với ID được chỉ định
-            await docRef.SetAsync(sp);
+            // dgvMenu.Rows.Clear();
 
-            MessageBox.Show("Thêm sản phẩm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information); 
+            if (list == null) return;
+
+            // Xóa dữ liệu từ gridview
+            dgvMenu.DataSource = null;
+            // Cập nhật dữ liệu 
+            dgvMenu.DataSource = list;
+
+            // Table Header
+            setProductHeader();
         }
     }
 }

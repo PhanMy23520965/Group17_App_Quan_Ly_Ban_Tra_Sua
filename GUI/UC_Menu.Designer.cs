@@ -1,4 +1,4 @@
-﻿namespace GD
+﻿namespace TraSuaApp
 {
     partial class UC_Menu
     {
@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnSearchMenu = new System.Windows.Forms.Button();
-            this.tbSearchMenu = new System.Windows.Forms.TextBox();
+            this.lbInfo = new System.Windows.Forms.Label();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.tbSearch = new System.Windows.Forms.TextBox();
             this.dgvMenu = new System.Windows.Forms.DataGridView();
             this.lbMenu = new System.Windows.Forms.Label();
             this.lbProductInfo = new System.Windows.Forms.Label();
@@ -52,52 +52,55 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lbInfo
             // 
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(273, 98);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 28);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "Tên sản phẩm";
+            this.lbInfo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbInfo.ForeColor = System.Drawing.Color.Black;
+            this.lbInfo.Location = new System.Drawing.Point(228, 91);
+            this.lbInfo.Name = "lbInfo";
+            this.lbInfo.Size = new System.Drawing.Size(187, 28);
+            this.lbInfo.TabIndex = 29;
+            this.lbInfo.Text = "Nhập thông tin";
             // 
-            // btnSearchMenu
+            // btnSearch
             // 
-            this.btnSearchMenu.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnSearchMenu.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchMenu.Location = new System.Drawing.Point(749, 93);
-            this.btnSearchMenu.Name = "btnSearchMenu";
-            this.btnSearchMenu.Size = new System.Drawing.Size(107, 34);
-            this.btnSearchMenu.TabIndex = 28;
-            this.btnSearchMenu.Text = "Tìm";
-            this.btnSearchMenu.UseVisualStyleBackColor = false;
-            this.btnSearchMenu.Click += new System.EventHandler(this.btnSearchMenu_Click);
+            this.btnSearch.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnSearch.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Location = new System.Drawing.Point(815, 86);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(107, 34);
+            this.btnSearch.TabIndex = 28;
+            this.btnSearch.Text = "Tìm kiếm";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // tbSearchMenu
+            // tbSearch
             // 
-            this.tbSearchMenu.Location = new System.Drawing.Point(423, 101);
-            this.tbSearchMenu.Name = "tbSearchMenu";
-            this.tbSearchMenu.Size = new System.Drawing.Size(301, 22);
-            this.tbSearchMenu.TabIndex = 27;
+            this.tbSearch.Location = new System.Drawing.Point(421, 94);
+            this.tbSearch.Name = "tbSearch";
+            this.tbSearch.Size = new System.Drawing.Size(364, 22);
+            this.tbSearch.TabIndex = 27;
             // 
             // dgvMenu
             // 
             this.dgvMenu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvMenu.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMenu.Location = new System.Drawing.Point(150, 139);
+            this.dgvMenu.Location = new System.Drawing.Point(142, 139);
             this.dgvMenu.Name = "dgvMenu";
             this.dgvMenu.RowHeadersVisible = false;
             this.dgvMenu.RowHeadersWidth = 51;
             this.dgvMenu.RowTemplate.Height = 24;
+            this.dgvMenu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMenu.Size = new System.Drawing.Size(863, 246);
             this.dgvMenu.TabIndex = 26;
+            this.dgvMenu.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMenu_RowEnter);
             // 
             // lbMenu
             // 
             this.lbMenu.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMenu.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lbMenu.Location = new System.Drawing.Point(417, 46);
+            this.lbMenu.Location = new System.Drawing.Point(417, 35);
             this.lbMenu.Name = "lbMenu";
             this.lbMenu.Size = new System.Drawing.Size(354, 42);
             this.lbMenu.TabIndex = 25;
@@ -141,6 +144,7 @@
             this.btnUpdate.TabIndex = 18;
             this.btnUpdate.Text = "Sửa";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // lbImage
             // 
@@ -181,6 +185,7 @@
             this.btnDelete.TabIndex = 19;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // lbProductName
             // 
@@ -255,9 +260,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Bisque;
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnSearchMenu);
-            this.Controls.Add(this.tbSearchMenu);
+            this.Controls.Add(this.lbInfo);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.tbSearch);
             this.Controls.Add(this.dgvMenu);
             this.Controls.Add(this.lbMenu);
             this.Controls.Add(this.tbImage);
@@ -277,7 +282,7 @@
             this.Controls.Add(this.lbProductID);
             this.Controls.Add(this.lbProductInfo);
             this.Name = "UC_Menu";
-            this.Size = new System.Drawing.Size(1139, 754);
+            this.Size = new System.Drawing.Size(1139, 723);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -285,9 +290,9 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnSearchMenu;
-        private System.Windows.Forms.TextBox tbSearchMenu;
+        private System.Windows.Forms.Label lbInfo;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.TextBox tbSearch;
         private System.Windows.Forms.DataGridView dgvMenu;
         private System.Windows.Forms.Label lbMenu;
         private System.Windows.Forms.Label lbProductInfo;
