@@ -20,18 +20,22 @@ namespace TraSuaApp
     public partial class UC_KhuyenMai : UserControl
     {
         string collectionName = "KhuyenMai";
+        FirestoreDb db = DBServices.Connect();
+
         public UC_KhuyenMai()
         {
             InitializeComponent();
+            dgvKM.ColumnHeadersVisible = true;
+            dgvKM.ColumnHeadersHeight = 40;
             Listen();
         }
 
         public void setCouponHeader()
         {
             // Config
-            dgvKM.AllowUserToAddRows = false;
+            /*dgvKM.AllowUserToAddRows = false;
             dgvKM.RowHeadersVisible = false;
-            dgvKM.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvKM.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;*/
 
             dgvKM.Columns["ID"].HeaderText = "Mã KM";
             dgvKM.Columns["NoiDung"].HeaderText = "Nội dung";
@@ -40,13 +44,11 @@ namespace TraSuaApp
             dgvKM.Columns["NgayKetThuc"].HeaderText = "Ngày KT";
             dgvKM.Columns["GiamToiDa"].HeaderText = "Giảm tối đa";
             dgvKM.Columns["GiaToiThieu"].HeaderText = "Giá tối thiểu";
-
         }
 
         public void Listen()
         {
             // Lắng nghe
-            FirestoreDb db = DBServices.Connect();
             db.Collection(collectionName).Listen(snapshot =>
             {
                 List<KhuyenMai> danhSach = new List<KhuyenMai>();
@@ -62,14 +64,14 @@ namespace TraSuaApp
                 {
                     dgvKM.DataSource = null; // Clear cũ
                     dgvKM.DataSource = danhSach; // Gán danh sách mới
+                    // Table Header
+                    setCouponHeader();
                 }));
 
-                // Table Header
-                setCouponHeader();
             });
         }
 
-        private void dgvMenu_RowEnter(object sender, DataGridViewCellEventArgs e)
+        private void dgvKM_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
             // RowIndex: Số thứ tự của hàng được click
             // Đảm bảo không click vào tiêu đề cột (RowIndex = -1)
@@ -78,14 +80,15 @@ namespace TraSuaApp
             {
                 DataGridViewRow row = dgvKM.Rows[e.RowIndex];
 
-                tbCouponID.Text = row.Cells["ID"].Value?.ToString();
+                tbMaKM.Text = row.Cells["ID"].Value?.ToString();
                 tbND.Text = row.Cells["NoiDung"].Value?.ToString();
                 dtpBatDau.Text = row.Cells["NgayBatDau"].Value?.ToString();
-                dtpBatDau.Text = row.Cells["NgayKetThuc"].Value?.ToString();
+                dtpKetThuc.Text = row.Cells["NgayKetThuc"].Value?.ToString();
                 tbChietKhau.Text = row.Cells["ChietKhau"].Value?.ToString();
                 tbGTD.Text = row.Cells["GiamToiDa"].Value?.ToString();
                 tbGTT.Text = row.Cells["GiaToiThieu"].Value?.ToString();
             }
+
         }
 
         private KhuyenMai createCoupon()
@@ -109,36 +112,19 @@ namespace TraSuaApp
             }
         }
 
-        private void LoadDanhSachKhuyenMai()
-        {
-            dgvKM.Columns.Clear();
-            dgvKM.AllowUserToAddRows = false;
-            dgvKM.RowHeadersVisible = false;
-            dgvKM.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvKM.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-
-
-            // Thêm dữ liệu mẫu
-            dgvKM.Rows.Add("KM001", "Giảm giá hè", 10, "01/04/2025", "30/04/2025");
-            dgvKM.Rows.Add("KM002", "Mừng lễ 30/4", 15, "25/04/2025", "01/05/2025");
-            dgvKM.Rows.Add("KM003", "Giảm giá sinh nhật", 20, "10/05/2025", "20/05/2025");
-            dgvKM.Rows.Add("KM004", "Ưu đãi khách hàng mới", 5, "01/04/2025", "31/05/2025");
-            dgvKM.Rows.Add("KM005", "Khuyến mãi cuối tuần", 25, "06/04/2025", "07/04/2025");
-        }
-
         private async void btnInsert_Click(object sender, EventArgs e)
         {
-            await DBServices.POST(createCoupon(), collectionName, tbCouponID.Text.Trim());
+            await DBServices.POST(createCoupon(), collectionName, tbMaKM.Text.Trim());
         }
 
         private async void btnUpdate_Click(object sender, EventArgs e)
         {
-            await DBServices.PUT(createCoupon(), collectionName, tbCouponID.Text.Trim());
+            await DBServices.PUT(createCoupon(), collectionName, tbMaKM.Text.Trim());
         }
 
         private async void btnDelete_Click(object sender, EventArgs e)
         {
-            await DBServices.DELETE(collectionName, tbCouponID.Text.Trim());
+            await DBServices.DELETE(collectionName, tbMaKM.Text.Trim());
         }
 
         private async void btnSearch_Click(object sender, EventArgs e)
@@ -156,6 +142,11 @@ namespace TraSuaApp
 
             // Table Header
             setCouponHeader();
+        }
+
+        private void guna2HtmlLabel6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

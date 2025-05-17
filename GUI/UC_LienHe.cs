@@ -20,6 +20,8 @@ namespace TraSuaApp
     public partial class UC_LienHe : UserControl
     {
         string collectionName = "LienHe";
+        FirestoreDb db = DBServices.Connect();
+
         public UC_LienHe()
         {
             InitializeComponent();
@@ -32,7 +34,6 @@ namespace TraSuaApp
             // Lỗi "Cross-thread operation not valid" xảy ra khi bạn cập nhật control UI từ một thread khác ngoài thread giao diện chính(UI thread).
             // Gọi Invoke() để chuyển về UI thread.
             // Listen() chạy trong một thread nền (background thread)
-            FirestoreDb db = DBServices.Connect();
             db.Collection(collectionName).Document("LH001").Listen(snapshot =>
             {
                 LienHe contact = snapshot.ConvertTo<LienHe>();
@@ -44,7 +45,7 @@ namespace TraSuaApp
                         tbSDT.Text = contact.SDT;
                         tbFB.Text = contact.Facebook;
                         tbIG.Text = contact.Instagram;
-                        tbShopee.Text = contact.ShopeeFood;
+                        tbSF.Text = contact.ShopeeFood;
                         tbDC.Text = contact.DiaChi;
                     }));
                 }
@@ -60,7 +61,7 @@ namespace TraSuaApp
                     SDT = tbSDT.Text.Trim(),
                     Facebook = tbFB.Text.Trim(),
                     Instagram = tbIG.Text.Trim(),
-                    ShopeeFood = tbShopee.Text.Trim(),
+                    ShopeeFood = tbSF.Text.Trim(),
                     DiaChi = tbDC.Text.Trim()
                 };
                 return sp;

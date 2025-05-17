@@ -1,4 +1,5 @@
-﻿using Models.Admin;
+﻿using Google.Cloud.Firestore;
+using Models.Admin;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -17,6 +18,8 @@ namespace TraSuaApp
     public partial class UC_AdminProfile : UserControl
     {
         string collectionName = "QuanTriVien";
+        FirestoreDb db = DBServices.Connect();
+
         public UC_AdminProfile()
         {
             InitializeComponent();
@@ -27,8 +30,8 @@ namespace TraSuaApp
             {
                 QuanTriVien qtv = new QuanTriVien
                 {
-                    HoTen = tbName.Text.Trim(),
-                    SoDienThoai = tbPhone.Text.Trim()
+                    HoTen = tbTen.Text.Trim(),
+                    SoDienThoai = tbSDT.Text.Trim()
                 };
                 return qtv;
             }

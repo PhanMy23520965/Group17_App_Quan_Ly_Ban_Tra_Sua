@@ -1,4 +1,5 @@
 ﻿using Google.Cloud.Firestore;
+using Guna.UI2.WinForms;
 using Models.Admin;
 using System;
 using System.Collections;
@@ -34,6 +35,9 @@ namespace TraSuaApp
 
             string[] OrderStatus = { "Chờ xác nhận", "Xác nhận", "Hủy" };
             cbTrangThaiDatBan.Items.AddRange(OrderStatus);
+
+            dgvCTBan.ColumnHeadersVisible = true;
+            dgvCTBan.ColumnHeadersHeight = 40;
         }
 
         public void Listen()
@@ -83,17 +87,27 @@ namespace TraSuaApp
         private void createTableCell(Ban Table)
         {
             // Tạo danh sách bàn 
-
-            Button btn = new Button();
+            Guna2GradientButton btn = new Guna2GradientButton();
 
             // Thiết lập nội dung và giao diện
             btn.Font = new Font("Arial", 8); // FontStyle.Bold
             btn.Text = $"Bàn {Table.ID}\nSức chứa: {Table.SucChua}\n({Table.TrangThai})";
             btn.Size = new Size(85, 80);
-            btn.ForeColor = Color.Black;
-            btn.TextAlign = ContentAlignment.MiddleCenter;
+            btn.ForeColor = Color.White;
+            btn.TextAlign = (HorizontalAlignment)ContentAlignment.MiddleCenter;
+            btn.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
 
-            btn.BackColor = Table.TrangThai.Trim() == "Trống" ? Color.Orange : Color.Red;
+            // Thiết lập màu gradient dựa trên trạng thái
+            if (Table.TrangThai.Trim() == "Trống")
+            {
+                btn.FillColor = Color.DodgerBlue;
+                btn.FillColor2 = Color.DodgerBlue;
+            }
+            else
+            {
+                btn.FillColor = Color.Red;
+                btn.FillColor2 = Color.Red;
+            }
 
             // Thiết lập hành vi click
             btn.Click += (s, e) =>
@@ -103,7 +117,6 @@ namespace TraSuaApp
                 cbTrangThaiBan.Text = Table.TrangThai;
 
                 // Chi tiet ban
-                FirestoreDb db = DBServices.Connect();
                 db.Collection(collectionName).Document(tbMaBan.Text.ToString()).Collection(subCollectionName).Listen(snapshot =>
                 {
                     List<DatBan> danhSach = new List<DatBan>();

@@ -18,14 +18,15 @@ namespace TraSuaApp
 {
     public partial class UC_DonHang : UserControl
     {
-        string collectionName = "DonHangTEMP";
+        string collectionName = "DonHang";
         string subCollectionName = "ChiTietDonHang";
-
         FirestoreDb db = DBServices.Connect();
 
         public UC_DonHang()
         {
             InitializeComponent();
+            dgvDH.ColumnHeadersVisible = dgvCTDH.ColumnHeadersVisible =  true;
+            dgvDH.ColumnHeadersHeight = dgvCTDH.ColumnHeadersHeight = 40;
             Listen();
 
             string[] options = { "Chờ xác nhận", "Xác nhận", "Đã thanh toán" };
@@ -91,7 +92,7 @@ namespace TraSuaApp
             });
         }
 
-        private async void dgvDH_RowEnter(object sender, DataGridViewCellEventArgs e)
+        private void dgvDH_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -102,25 +103,11 @@ namespace TraSuaApp
                 {
                     DataGridViewRow row = dgvDH.Rows[e.RowIndex];
 
-                    tbMaDH.Text = row.Cells["ID"].Value?.ToString();
+                    tbDH.Text = row.Cells["ID"].Value?.ToString();
                     cbTrangThaiDH.Text = row.Cells["TrangThai"].Value?.ToString();
 
-                    // string collectionName = "DonHang";
-                    // string subCollectionName = "ChiTietDonHang";
-
-                    DocumentSnapshot doc = await db.Collection(collectionName).Document("DH001").
-                                                    Collection(subCollectionName).Document("CT001").GetSnapshotAsync();
-
-                    ChiTietDonHang ct = doc.ConvertTo<ChiTietDonHang>();
-
-                    // Dùng MaSP để truy vấn dữ liệu của sản phẩm được tham chiếu
-                    DocumentSnapshot spSnapshot = await ct.MaSP.GetSnapshotAsync();
-
-                    SanPham sp = spSnapshot.ConvertTo<SanPham>();
-                    MessageBox.Show("Tên sản phẩm: " + sp.TenSP);
-
                     // Lắng nghe
-                    db.Collection(collectionName).Document(tbMaDH.Text.ToString()).Collection(subCollectionName).Listen(snapshot =>
+                    db.Collection(collectionName).Document(tbDH.Text.ToString()).Collection(subCollectionName).Listen(snapshot =>
                     {
                         List<ChiTietDonHang> danhSach = new List<ChiTietDonHang>();
 
@@ -154,7 +141,7 @@ namespace TraSuaApp
 
         private void btnUpdateOrder_Click(object sender, EventArgs e)
         {
-            DocumentReference doc = db.Collection(collectionName).Document(tbMaDH.Text);
+            DocumentReference doc = db.Collection(collectionName).Document(tbDH.Text);
 
             if (doc != null)
             {
