@@ -19,10 +19,14 @@ namespace TraSuaApp
     public partial class UC_Menu : UserControl
     {
         string collectionName = "SanPham";
+        FirestoreDb db = DBServices.Connect();
 
         public UC_Menu()
         {
             InitializeComponent();
+            // Đảm bảo header được hiển thị
+            dgvMenu.ColumnHeadersVisible = true;
+            dgvMenu.ColumnHeadersHeight = 40;
             Listen();
         }
 
@@ -39,14 +43,12 @@ namespace TraSuaApp
         public void Listen()
         {
             // Lắng nghe
-            FirestoreDb db = DBServices.Connect();
             db.Collection(collectionName).Listen(snapshot =>
             {
                 List<SanPham> danhSach = new List<SanPham>();
                 foreach (DocumentSnapshot document in snapshot.Documents)
                 {
                     SanPham obj = document.ConvertTo<SanPham>();
-
                     danhSach.Add(obj);
                 }
 
@@ -55,12 +57,10 @@ namespace TraSuaApp
                 {
                     dgvMenu.DataSource = null; // Clear cũ
                     dgvMenu.DataSource = danhSach; // Gán danh sách mới
+                    // Table Header
+                    setProductHeader();
                 }));
-
-                // Table Header
-                setProductHeader();
             });
-
         }
 
         private void dgvMenu_RowEnter(object sender, DataGridViewCellEventArgs e)
@@ -72,12 +72,12 @@ namespace TraSuaApp
             {
                 DataGridViewRow row = dgvMenu.Rows[e.RowIndex];
 
-                tbProductID.Text = row.Cells["ID"].Value?.ToString();
-                tbProductName.Text = row.Cells["TenSP"].Value?.ToString();
-                tbPrice.Text = row.Cells["Gia"].Value?.ToString();
-                tbType.Text = row.Cells["LoaiSP"].Value?.ToString();
-                tbStatus.Text = row.Cells["TrangThai"].Value?.ToString();
-                tbImage.Text = row.Cells["HinhAnh"].Value?.ToString();
+                tbMaSP.Text = row.Cells["ID"].Value?.ToString();
+                tbTenSP.Text = row.Cells["TenSP"].Value?.ToString();
+                tbGia.Text = row.Cells["Gia"].Value?.ToString();
+                tbLoai.Text = row.Cells["LoaiSP"].Value?.ToString();
+                tbTT.Text = row.Cells["TrangThai"].Value?.ToString();
+                tbHA.Text = row.Cells["HinhAnh"].Value?.ToString();
             }
         }
 
@@ -88,11 +88,11 @@ namespace TraSuaApp
             {
                 SanPham sp = new SanPham
                 {
-                    TenSP = tbProductName.Text.Trim(),
-                    Gia = int.Parse(tbPrice.Text),
-                    LoaiSP = tbType.Text.Trim(),
-                    TrangThai = tbStatus.Text.Trim(),
-                    HinhAnh = tbImage.Text.Trim()
+                    TenSP = tbTenSP.Text.Trim(),
+                    Gia = int.Parse(tbGia.Text),
+                    LoaiSP = tbLoai.Text.Trim(),
+                    TrangThai = tbTT.Text.Trim(),
+                    HinhAnh = tbHA.Text.Trim()
                 };
                 return sp;
             }
@@ -105,17 +105,17 @@ namespace TraSuaApp
         // 
         private async void btnInsert_Click(object sender, EventArgs e)
         {
-            await DBServices.POST(createProduct(), collectionName, tbProductID.Text.Trim());
+            await DBServices.POST(createProduct(), collectionName, tbMaSP.Text.Trim());
         }
 
         private async void btnUpdate_Click(object sender, EventArgs e)
         {
-            await DBServices.PUT(createProduct(), collectionName, tbProductID.Text.Trim());
+            await DBServices.PUT(createProduct(), collectionName, tbMaSP.Text.Trim());
         }
 
         private async void btnDelete_Click(object sender, EventArgs e)
         {
-            await DBServices.DELETE(collectionName, tbProductID.Text.Trim());
+            await DBServices.DELETE(collectionName, tbMaSP.Text.Trim());
         }
 
         private async void btnSearch_Click(object sender, EventArgs e)
