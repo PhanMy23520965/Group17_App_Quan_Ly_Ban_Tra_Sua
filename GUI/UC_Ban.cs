@@ -56,7 +56,7 @@ namespace TraSuaApp
                 flpBan.Invoke(new Action(() =>
                 {
                     // Xóa bàn
-                    foreach (Control control in flpBan.Controls.OfType<Button>().ToList())
+                    foreach (Control control in flpBan.Controls.OfType<Guna2GradientButton>().ToList())
                     {
                         flpBan.Controls.Remove(control);
                         control.Dispose();
@@ -66,8 +66,6 @@ namespace TraSuaApp
                     foreach (Ban table in danhSach)
                         createTableCell(table);
                 }));
-
-                // setHeader();
             });
 
         }
@@ -102,11 +100,13 @@ namespace TraSuaApp
             {
                 btn.FillColor = Color.DodgerBlue;
                 btn.FillColor2 = Color.DodgerBlue;
+                btn.ForeColor = Color.Black;
             }
             else
             {
                 btn.FillColor = Color.Red;
                 btn.FillColor2 = Color.Red;
+                btn.ForeColor = Color.Black;
             }
 
             // Thiết lập hành vi click
