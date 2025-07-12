@@ -1,129 +1,76 @@
-﻿using System;
+﻿using Google.Cloud.Firestore;
+using Guna.UI2.WinForms;
+using Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Runtime.InteropServices;
-using Models;
 using TraSuaApp.Models;
-using Google.Cloud.Firestore;
+using TraSuaApp.Models.Admin;
 using TraSuaApp.Services;
 
-namespace TraSuaApp
+namespace TraSuaApp.View
 {
     public partial class ChiTietSanPham : Form
     {
-        private ChiTietDonHangUser formDonHang; // tham chiếu tới form giỏ hàng
-        private string masp = "";
+        private DonHangUser donhang; // tham chiếu tới form giỏ hàng
+        private SanPham Sp;
         private string AnhSanPham = "";
-        public const int WM_NCLBUTTONDOWN = 0xA1;
-        public const int HTCAPTION = 0x2;
+        private FirestoreDb db = DBServices.Connect();
+        private Guna.UI2.WinForms.Guna2WinProgressIndicator loadingDanhGia;
 
-        [DllImport("user32.dll")]
-        public static extern bool ReleaseCapture();
-
-        [DllImport("user32.dll")]
-        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
-        public ChiTietSanPham(SanPham sp, ChiTietDonHangUser formDonHang)
+        public ChiTietSanPham(SanPham sp, DonHangUser formDonHang)
         {
             InitializeComponent();
-            this.guna2Panel1.MouseDown += Form_MouseDown;
-            this.Padding = new Padding(3);
 
-            lbTenSP.Text = sp.TenSP;
-            lbGiaS.Text = sp.Gia.ToString("N0");
-            lbGiaM.Text = (sp.Gia * 1.3).ToString("N0");
-            lbGiaL.Text = (sp.Gia * 1.5).ToString("N0");
-            lbLoaiSP.Text = sp.LoaiSP;
-            lbTrangThai.Text = sp.TrangThai;
+            loadingDanhGia = new Guna2WinProgressIndicator
+            {
+                Name = "loadingDanhGia",
+                Size = new Size(60, 60),
+                CircleSize = 1.0F,
+                ProgressColor = Color.FromArgb(255, 141, 31),
+                BackColor = Color.Transparent,
+                Visible = false,
+                Location = new Point(this.Width / 2 - 30, this.Height / 2 - 30), // Canh giữa
+                Anchor = AnchorStyles.None
+            };
+            this.Controls.Add(loadingDanhGia);
+
+            lblTen.Text = sp.TenSP;
+            lblGia.Text = sp.Gia.ToString("N0") + " VND";
+            lblTrangThai.Text = sp.TrangThai.ToUpper();
+            if (sp.TrangThai.ToLower() != "còn hàng") lblTrangThai.ForeColor = Color.Red;
+            else lblTrangThai.ForeColor = Color.DarkGreen;
             AnhSanPham = sp.HinhAnh;
-            masp = sp.ID;
+            Sp = sp;
+
+            HienThiDanhGia(Sp.ID);
 
             try
             {
-                ptBHinhAnh.Load(sp.HinhAnh);
+                picBoxAnhLon.Load(sp.HinhAnh);
+                picBoxAnhNho.Load(sp.HinhAnh);
             }
             catch
             {
-                ptBHinhAnh.Image = null;
+                picBoxAnhLon.Image = null;
+                picBoxAnhNho.Image = null;
             }
 
-            this.formDonHang = formDonHang;
+            this.donhang = formDonHang;
         }
 
-        // Tạo khả năng kéo thả cho form
-        private void Form_MouseDown(object sender, MouseEventArgs e)
+        private void btnMuaNgay_Click(object sender, EventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
+            if (lblTrangThai.Text?.ToLower() == "hết hàng" || lblTrangThai.Text?.ToLower() == "ngừng bán")
             {
-                ReleaseCapture();
-                SendMessage(this.Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0);
-            }
-        }
-
-        //Phóng to, thu nhỏ các viền của form
-        protected override void WndProc(ref Message m)
-        {
-            const int HTLEFT = 10;
-            const int HTRIGHT = 11;
-            const int HTTOP = 12;
-            const int HTTOPLEFT = 13;
-            const int HTTOPRIGHT = 14;
-            const int HTBOTTOM = 15;
-            const int HTBOTTOMLEFT = 16;
-            const int HTBOTTOMRIGHT = 17;
-            const int WM_NCHITTEST = 0x84;
-
-            const int resizeAreaSize = 10; // vùng resize tính từ mép
-
-            if (m.Msg == WM_NCHITTEST)
-            {
-                base.WndProc(ref m);
-
-                Point screenPoint = new Point(m.LParam.ToInt32());
-                Point clientPoint = this.PointToClient(screenPoint);
-
-                if (clientPoint.Y <= resizeAreaSize)
-                {
-                    if (clientPoint.X <= resizeAreaSize)
-                        m.Result = (IntPtr)HTTOPLEFT;
-                    else if (clientPoint.X < (this.Width - resizeAreaSize))
-                        m.Result = (IntPtr)HTTOP;
-                    else
-                        m.Result = (IntPtr)HTTOPRIGHT;
-                }
-                else if (clientPoint.Y <= (this.Height - resizeAreaSize))
-                {
-                    if (clientPoint.X <= resizeAreaSize)
-                        m.Result = (IntPtr)HTLEFT;
-                    else if (clientPoint.X >= (this.Width - resizeAreaSize))
-                        m.Result = (IntPtr)HTRIGHT;
-                }
-                else
-                {
-                    if (clientPoint.X <= resizeAreaSize)
-                        m.Result = (IntPtr)HTBOTTOMLEFT;
-                    else if (clientPoint.X < (this.Width - resizeAreaSize))
-                        m.Result = (IntPtr)HTBOTTOM;
-                    else
-                        m.Result = (IntPtr)HTBOTTOMRIGHT;
-                }
-
-                return;
-            }
-
-            base.WndProc(ref m);
-        }
-
-        private void btnThemVaoDonHang_Click(object sender, EventArgs e)
-        {
-            if (lbTrangThai.Text?.ToLower() == "hết hàng" || lbTrangThai.Text?.ToLower() == "ngừng bán")
-            {
-                MessageBox.Show($"{lbTenSP} hiện đang hết hàng. Vui lòng chọn sản phẩm khác.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"{lblTen} hiện đang hết hàng. Vui lòng chọn sản phẩm khác.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             // Xác định size được chọn
@@ -137,12 +84,13 @@ namespace TraSuaApp
             FirestoreDb db = DBServices.Connect();
             ChiTietDonHangTam ct = new ChiTietDonHangTam
             {
-                MaSP = masp,
-                TenSP = lbTenSP.Text, // tên sản phẩm từ label
-                GiaBan = double.Parse(lbGiaS.Text)*1000, // giá gốc
-                SoLuong = 1, // mặc định 1
-                Size = size,
-                HinhAnh = AnhSanPham,
+                MaSP = Sp.ID,
+                TenSP = Sp.TenSP,
+                HinhAnh = Sp.HinhAnh,
+                GiaBan = Sp.Gia,
+                SoLuong = 1,
+                Size = "S",
+                ThanhTien = Sp.Gia
             };
 
             // Tính tiền theo size
@@ -153,29 +101,211 @@ namespace TraSuaApp
             ct.ThanhTien = ct.GiaBan * ct.SoLuong * heSo;
 
             // Gọi form giỏ hàng để thêm
-            formDonHang.ThemChiTietVaoGiaoDien(ct);
+            donhang.ThemChiTietVaoGiaoDien(ct);
 
             // thông báo
             MessageBox.Show("Đã thêm vào giỏ hàng!");
         }
 
-        private void btnDonHang_Click(object sender, EventArgs e)
+        private async Task<List<DanhGia>> LayDanhGiaTheoSanPham(string maSP)
         {
-            this.Close();
-            // Hiện form đơn hàng dưới dạng modal (có thể chỉnh lại thành .Show nếu muốn song song)
-            formDonHang.ShowDialog();
+            List<DanhGia> danhSachDanhGia = new List<DanhGia>();
+
+            try
+            {
+                // 1. Chuyển maSP từ string sang DocumentReference
+                DocumentReference spRef = db.Collection("SanPham").Document(maSP);
+
+                // 2. Truy vấn tất cả các đơn hàng
+                QuerySnapshot donHangSnapshot = await db.Collection("DonHang").GetSnapshotAsync();
+
+                List<DocumentReference> dsMaDH = new List<DocumentReference>();
+
+                foreach (DocumentSnapshot donHangDoc in donHangSnapshot.Documents)
+                {
+                    // 3. Lấy subcollection ChiTietDonHang của từng đơn hàng
+                    CollectionReference chiTietRef = donHangDoc.Reference.Collection("ChiTietDonHang");
+
+                    Query chiTietQuery = chiTietRef.WhereEqualTo("MaSP", spRef);
+                    QuerySnapshot chiTietSnapshot = await chiTietQuery.GetSnapshotAsync();
+
+                    // 4. Lấy MaDH nếu có sản phẩm trùng khớp
+                    if (chiTietSnapshot.Count > 0)
+                    {
+                        dsMaDH.Add(donHangDoc.Reference);  // Thêm MaDH vào danh sách
+                    }
+                }
+
+                if (dsMaDH.Count == 0) return danhSachDanhGia; // Không có đánh giá nào
+
+                // 2. Lấy các đánh giá từ MaDH
+                Query danhGiaQuery = db.Collection("DanhGia")
+                                       .WhereIn("MaDH", dsMaDH);
+
+                QuerySnapshot danhGiaSnapshot = await danhGiaQuery.GetSnapshotAsync();
+
+                foreach (DocumentSnapshot doc in danhGiaSnapshot.Documents)
+                {
+                    DanhGia danhGia = doc.ConvertTo<DanhGia>();
+                    danhGia.ID = doc.Id;
+                    danhSachDanhGia.Add(danhGia);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Lỗi khi lấy đánh giá: {ex.Message}");
+            }
+
+            return danhSachDanhGia;
         }
 
-        private void btnMenu_Click(object sender, EventArgs e)
+
+
+        private async Task<string> LayTenKhachHang(DocumentReference maKH)
         {
-            this.Close();
-            Menu formMenu = new Menu(formDonHang); // tạo mới form Menu
-            formMenu.ShowDialog(); // hiển thị form Menu
+            try
+            {
+                DocumentSnapshot doc = await maKH.GetSnapshotAsync();
+                if (doc.Exists && doc.ContainsField("TenKH"))
+                {
+                    return doc.GetValue<string>("TenKH");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi lấy tên khách hàng: {ex.Message}", "Lỗi");
+            }
+            return "Khách hàng ẩn danh";
         }
 
-        private void guna2ControlBox6_Click(object sender, EventArgs e)
+        private async void HienThiDanhGia(string maSP)
         {
-            Application.Exit(); // Đóng tất cả các form và thoát chương trình
+            try
+            {
+                // Xóa các đánh giá cũ trong panel
+                flpDanhGia.Controls.Clear();
+                loadingDanhGia.Visible = true;
+                loadingDanhGia.Start();
+
+                // Lấy danh sách đánh giá từ Firestore
+                List<DanhGia> danhGiaList = await LayDanhGiaTheoSanPham(maSP);
+
+                foreach (var danhGia in danhGiaList)
+                {
+                    // Lấy tên khách hàng từ DocumentReference
+                    string tenKH = await LayTenKhachHang(danhGia.MaKH);
+
+                    // Tạo Panel con chứa đánh giá
+                    Panel pnlDanhGia = new Panel
+                    {
+                        Width = flpDanhGia.Width - 50,
+                        Height = 110,
+                        Margin = new Padding(5),
+                        BackColor = Color.Transparent,
+                    };
+
+                    PictureBox pic = new PictureBox
+                    {
+                        Image = Properties.Resources.daunguoi,
+                        Location = new Point(25, 5),
+                        Size = new Size(50, 40),
+                        SizeMode = PictureBoxSizeMode.Zoom,
+                        TabIndex = 2,
+                        TabStop = false,
+                    };
+
+
+                    // Tên khách hàng
+                    Label lblTenKH = new Label
+                    {
+                        Text = $"{tenKH}",
+                        Font = new Font("Segoe UI Semibold", 11, FontStyle.Bold),
+                        Location = new Point(71, 10),
+                        ForeColor = Color.Black,
+                        AutoSize = true,
+                    };
+
+                    pnlDanhGia.Controls.Add(pic);
+                    pnlDanhGia.Controls.Add(lblTenKH);
+
+                    // Hiển thị số sao
+
+                    Panel pnlsao = new Panel
+                    {
+                        Location = new Point(lblTenKH.Location.X + lblTenKH.Width + 5, lblTenKH.Location.Y-4),
+                        BackColor = Color.Transparent,
+                        Size = new Size(205, 41),
+                    };
+
+                    Guna2PictureBox[] starts = new Guna2PictureBox[5];
+                    for(int i=0;i<danhGia.SaoDG;++i)
+                    {
+                        starts[i] = new Guna2PictureBox
+                        {
+                            Image = Properties.Resources.sao,
+                            Size = new Size(34, 38),
+                            SizeMode = PictureBoxSizeMode.Zoom,
+                            TabStop = false,
+                            Location = new Point(34 * i, 0),
+                        };
+
+                        pnlsao.Controls.Add(starts[i]);
+                    }
+                    for(int i=danhGia.SaoDG;i<5;++i)
+                    {
+                        starts[i] = new Guna2PictureBox
+                        {
+                            Image = Properties.Resources.saokhongsanpham,
+                            Size = new Size(34, 38),
+                            SizeMode = PictureBoxSizeMode.Zoom,
+                            Location = new Point(34 * i, 0),
+                        };
+
+                        pnlsao.Controls.Add(starts[i]);
+                    }
+
+                    pnlDanhGia.Controls.Add(pnlsao);
+
+                    // Hiển thị nội dung đánh giá
+                    Label lblNoiDung = new Label
+                    {
+                        Text = $"{danhGia.NoiDung}",
+                        Font = new Font("Segoe UI", 10),
+                        AutoSize = true,
+                        ForeColor = Color.Black,
+                        Location = new Point(25, 50),
+                        Padding = new Padding(5),
+
+                    };
+                    pnlDanhGia.Controls.Add(lblNoiDung);
+
+                    // Thêm panel đánh giá vào FlowLayoutPanel
+                    flpDanhGia.Controls.Add(pnlDanhGia);
+                }
+
+                if (danhGiaList.Count == 0)
+                {
+                    Label lblThongBao = new Label
+                    {
+                        Text = "Chưa có đánh giá nào cho sản phẩm này.",
+                        Font = new Font("Segoe UI", 12, FontStyle.Italic),
+                        ForeColor = Color.Gray,
+                        AutoSize = true,
+                        Margin = new Padding(5),
+                    };
+                    flpDanhGia.Controls.Add(lblThongBao);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi hiển thị đánh giá: {ex.Message}", "Lỗi");
+            }
+            finally
+            {
+                loadingDanhGia.Stop();
+                loadingDanhGia.Visible = false;
+            }
         }
+
     }
 }
