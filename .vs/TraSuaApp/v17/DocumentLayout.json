@@ -1,0 +1,1157 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Laptrinhmangcanban\\TraSuaApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\views\\home1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\home1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\views\\home1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\home1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\views\\dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\views\\thanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\thanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\views\\thongtintaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\thongtintaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\views\\thanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\thanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|c:\\laptrinhmangcanban\\trasuaapp\\trasuaapp\\views\\dangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\dangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\views\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\views\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|c:\\laptrinhmangcanban\\trasuaapp\\trasuaapp\\sessionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\sessionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\properties\\resources.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\properties\\resources.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|c:\\laptrinhmangcanban\\trasuaapp\\trasuaapp\\views\\khuyenmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\khuyenmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\views\\chitietdonhanguser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\chitietdonhanguser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\views\\chitietsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\chitietsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\views\\danhgiauser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\danhgiauser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\views\\danhgiauser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\danhgiauser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\views\\dangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\dangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\views\\datban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\datban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\views\\chitietdonhanguser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\chitietdonhanguser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\properties\\settings.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\properties\\settings.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\views\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\models\\donhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\models\\donhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\views\\chitietsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\chitietsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\views\\sanphamdamua.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\sanphamdamua.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\views\\vouchercuaban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\vouchercuaban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\views\\sanphamnew.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\sanphamnew.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\views\\sanphamhot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\sanphamhot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\views\\sanphamdamua.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\sanphamdamua.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\views\\sanphamdamua.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\sanphamdamua.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\views\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\views\\lienhe.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\lienhe.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\views\\menu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\menu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\views\\lienhe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\lienhe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\services\\dbservies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\services\\dbservies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\models\\ban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\models\\ban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\models\\khachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\models\\khachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\views\\dangnhap.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\dangnhap.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\views\\dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\models\\taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\models\\taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\models\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\models\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\models\\chitietdonhangtam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\models\\chitietdonhangtam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\views\\vouchercuaban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\vouchercuaban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\views\\home1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\home1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\views\\sanphamnew.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\sanphamnew.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\views\\sanphamhot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\sanphamhot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\views\\lienhe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\lienhe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\views\\thongtintaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\thongtintaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\models\\danhgia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\models\\danhgia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\models\\chitietdonhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\models\\chitietdonhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\views\\chitietsanpham.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\chitietsanpham.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\models\\khuyenmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\models\\khuyenmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\views\\sanphamhot.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\sanphamhot.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\views\\chitietdonhanguser.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\chitietdonhanguser.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\views\\home1.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{7E9486C3-C237-4533-98CB-CFC1D2F81BEC}|TraSuaApp\\TraSuaApp.csproj|solutionrelative:trasuaapp\\views\\home1.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\view\\menu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:trasuaapp\\view\\menu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\view\\sanphamdamua.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:trasuaapp\\view\\sanphamdamua.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\view\\sanphamdamua.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:trasuaapp\\view\\sanphamdamua.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\view\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:trasuaapp\\view\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\view\\thongtintaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:trasuaapp\\view\\thongtintaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\view\\chitietsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:trasuaapp\\view\\chitietsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\view\\danhgia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:trasuaapp\\view\\danhgia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\view\\lienhe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:trasuaapp\\view\\lienhe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\view\\lienhe.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:trasuaapp\\view\\lienhe.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\view\\danhgia.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:trasuaapp\\view\\danhgia.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\view\\thongtintaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:trasuaapp\\view\\thongtintaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\view\\chitietsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:trasuaapp\\view\\chitietsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Laptrinhmangcanban\\TraSuaApp\\trasuaapp\\view\\chitietsanpham.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:trasuaapp\\view\\chitietsanpham.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Home1.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\Home1.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\Home1.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\Home1.cs",
+              "RelativeToolTip": "TraSuaApp\\Views\\Home1.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAAABEAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T10:47:46.424Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ThongTinTaiKhoan.cs [Design]",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\ThongTinTaiKhoan.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\ThongTinTaiKhoan.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\ThongTinTaiKhoan.cs [Design]",
+              "RelativeToolTip": "TraSuaApp\\Views\\ThongTinTaiKhoan.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T09:10:05.028Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Khuyenmai.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\Khuyenmai.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\Khuyenmai.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\Khuyenmai.cs",
+              "RelativeToolTip": "TraSuaApp\\Views\\Khuyenmai.cs",
+              "ViewState": "AQIAAMgAAAAAAAAAAADwv+IAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T19:46:20.33Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Dangnhap.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\Dangnhap.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\Dangnhap.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\Dangnhap.cs",
+              "RelativeToolTip": "TraSuaApp\\Views\\Dangnhap.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAIQAAACBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T13:51:29.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Program.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Program.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Program.cs",
+              "RelativeToolTip": "TraSuaApp\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T14:12:46.464Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Home.cs [Design]",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\Home.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\Home.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\Home.cs [Design]",
+              "RelativeToolTip": "TraSuaApp\\Views\\Home.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T05:26:32.864Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Thanhtoan.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\Thanhtoan.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\Thanhtoan.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\Thanhtoan.cs",
+              "RelativeToolTip": "TraSuaApp\\Views\\Thanhtoan.cs",
+              "ViewState": "AQIAAIEAAAAAAAAAAAAAAI8AAACNAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T19:29:02.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Thanhtoan.cs [Design]",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\Thanhtoan.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\Thanhtoan.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\Thanhtoan.cs [Design]",
+              "RelativeToolTip": "TraSuaApp\\Views\\Thanhtoan.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T19:28:27.538Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Home1.cs [Design]",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\Home1.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\Home1.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\Home1.cs [Design]",
+              "RelativeToolTip": "TraSuaApp\\Views\\Home1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T03:48:08.517Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Menu.cs [Design]",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\Menu.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\Menu.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\Menu.cs [Design]",
+              "RelativeToolTip": "TraSuaApp\\Views\\Menu.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T02:13:32.595Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Dangky.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\Dangky.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\Dangky.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\Dangky.cs",
+              "RelativeToolTip": "TraSuaApp\\Views\\Dangky.cs",
+              "ViewState": "AQIAAJgAAAAAAAAAAAAmwLUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T21:42:54.834Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SessionManager.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\SessionManager.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\SessionManager.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\SessionManager.cs",
+              "RelativeToolTip": "TraSuaApp\\SessionManager.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAmwC0AAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T21:35:32.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DanhGiaUser.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\DanhGiaUser.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\DanhGiaUser.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\DanhGiaUser.cs*",
+              "RelativeToolTip": "TraSuaApp\\Views\\DanhGiaUser.cs*",
+              "ViewState": "AQIAAHcAAAAAAAAAAAAtwJUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T14:59:52.893Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "DanhGiaUser.cs [Design]",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\DanhGiaUser.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\DanhGiaUser.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\DanhGiaUser.cs [Design]*",
+              "RelativeToolTip": "TraSuaApp\\Views\\DanhGiaUser.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T15:19:37.794Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Resources.Designer.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Properties\\Resources.Designer.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Properties\\Resources.Designer.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Properties\\Resources.Designer.cs",
+              "RelativeToolTip": "TraSuaApp\\Properties\\Resources.Designer.cs",
+              "ViewState": "AQIAALQAAAAAAAAAAAAAAMoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T14:13:32.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ChiTietDonHangUser.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\ChiTietDonHangUser.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\ChiTietDonHangUser.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\ChiTietDonHangUser.cs",
+              "RelativeToolTip": "TraSuaApp\\Views\\ChiTietDonHangUser.cs",
+              "ViewState": "AQIAAGkBAAAAAAAAAAAAAI0BAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T09:38:48.079Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Resources.resx",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Properties\\Resources.resx",
+              "RelativeDocumentMoniker": "TraSuaApp\\Properties\\Resources.resx",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Properties\\Resources.resx",
+              "RelativeToolTip": "TraSuaApp\\Properties\\Resources.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-05-15T16:42:32.526Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ChiTietSanPham.cs [Design]",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\ChiTietSanPham.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\ChiTietSanPham.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\ChiTietSanPham.cs [Design]",
+              "RelativeToolTip": "TraSuaApp\\Views\\ChiTietSanPham.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T15:58:54.849Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Dangky.cs [Design]",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\Dangky.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\Dangky.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\Dangky.cs [Design]",
+              "RelativeToolTip": "TraSuaApp\\Views\\Dangky.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T19:22:48.775Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Datban.cs [Design]",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\Datban.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\Datban.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\Datban.cs [Design]",
+              "RelativeToolTip": "TraSuaApp\\Views\\Datban.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T19:23:03.811Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Settings.Designer.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Properties\\Settings.Designer.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Properties\\Settings.Designer.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Properties\\Settings.Designer.cs",
+              "RelativeToolTip": "TraSuaApp\\Properties\\Settings.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T19:12:53.963Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ChiTietDonHangUser.cs [Design]",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\ChiTietDonHangUser.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\ChiTietDonHangUser.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\ChiTietDonHangUser.cs [Design]",
+              "RelativeToolTip": "TraSuaApp\\Views\\ChiTietDonHangUser.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T19:14:12.184Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Menu.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\Menu.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\Menu.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\Menu.cs",
+              "RelativeToolTip": "TraSuaApp\\Views\\Menu.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAABcAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T08:35:14.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "DonHang.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Models\\DonHang.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Models\\DonHang.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Models\\DonHang.cs",
+              "RelativeToolTip": "TraSuaApp\\Models\\DonHang.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAAB4AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T06:44:53.56Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ChiTietSanPham.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\ChiTietSanPham.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\ChiTietSanPham.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\ChiTietSanPham.cs",
+              "RelativeToolTip": "TraSuaApp\\Views\\ChiTietSanPham.cs",
+              "ViewState": "AQIAALUAAAAAAAAAAAAAAC8BAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T15:37:53.735Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "SanPhamDaMua.cs [Design]",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\SanPhamDaMua.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\SanPhamDaMua.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\SanPhamDaMua.cs [Design]",
+              "RelativeToolTip": "TraSuaApp\\Views\\SanPhamDaMua.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T15:24:13.848Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "SanPhamDaMua.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\SanPhamDaMua.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\SanPhamDaMua.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\SanPhamDaMua.cs",
+              "RelativeToolTip": "TraSuaApp\\Views\\SanPhamDaMua.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAACcAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T14:16:27.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "VoucherCuaBan.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\VoucherCuaBan.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\VoucherCuaBan.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\VoucherCuaBan.cs",
+              "RelativeToolTip": "TraSuaApp\\Views\\VoucherCuaBan.cs",
+              "ViewState": "AQIAAF0AAAAAAAAAAAAqwGYAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T15:28:42.432Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "SanPhamHot.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\SanPhamHot.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\SanPhamHot.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\SanPhamHot.cs",
+              "RelativeToolTip": "TraSuaApp\\Views\\SanPhamHot.cs",
+              "ViewState": "AQIAABoBAAAAAAAAAAAAABoBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T15:21:18.668Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "SanPhamNew.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\SanPhamNew.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\SanPhamNew.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\SanPhamNew.cs",
+              "RelativeToolTip": "TraSuaApp\\Views\\SanPhamNew.cs",
+              "ViewState": "AQIAAN0AAAAAAAAAAAAAAPEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T10:17:11.853Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "SanPhamDaMua.Designer.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\SanPhamDaMua.Designer.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\SanPhamDaMua.Designer.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\SanPhamDaMua.Designer.cs",
+              "RelativeToolTip": "TraSuaApp\\Views\\SanPhamDaMua.Designer.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAAFoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T15:07:42.012Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Home.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\Home.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\Home.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\Home.cs",
+              "RelativeToolTip": "TraSuaApp\\Views\\Home.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAAABQAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T05:29:20.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "LienHe.Designer.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\LienHe.Designer.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\LienHe.Designer.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\LienHe.Designer.cs",
+              "RelativeToolTip": "TraSuaApp\\Views\\LienHe.Designer.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T14:50:06.738Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Menu.Designer.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\Menu.Designer.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\Menu.Designer.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\Menu.Designer.cs",
+              "RelativeToolTip": "TraSuaApp\\Views\\Menu.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAABAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T02:37:28.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "LienHe.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\LienHe.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\LienHe.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\LienHe.cs",
+              "RelativeToolTip": "TraSuaApp\\Views\\LienHe.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T10:37:09.066Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "DBServies.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Services\\DBServies.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Services\\DBServies.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Services\\DBServies.cs",
+              "RelativeToolTip": "TraSuaApp\\Services\\DBServies.cs",
+              "ViewState": "AQIAAMUAAAAAAAAAAAAowN4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T17:04:46.627Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Ban.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Models\\Ban.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Models\\Ban.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Models\\Ban.cs",
+              "RelativeToolTip": "TraSuaApp\\Models\\Ban.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T00:58:04.26Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "KhachHang.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Models\\KhachHang.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Models\\KhachHang.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Models\\KhachHang.cs",
+              "RelativeToolTip": "TraSuaApp\\Models\\KhachHang.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T08:48:38.874Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Dangnhap.Designer.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\Dangnhap.Designer.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\Dangnhap.Designer.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\Dangnhap.Designer.cs",
+              "RelativeToolTip": "TraSuaApp\\Views\\Dangnhap.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T13:52:25.088Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Dangnhap.cs [Design]",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\Dangnhap.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\Dangnhap.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\Dangnhap.cs [Design]",
+              "RelativeToolTip": "TraSuaApp\\Views\\Dangnhap.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T13:53:21.969Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "SanPham.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Models\\SanPham.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Models\\SanPham.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Models\\SanPham.cs",
+              "RelativeToolTip": "TraSuaApp\\Models\\SanPham.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAABIAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T14:23:09.391Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "TaiKhoan.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Models\\TaiKhoan.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Models\\TaiKhoan.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Models\\TaiKhoan.cs",
+              "RelativeToolTip": "TraSuaApp\\Models\\TaiKhoan.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T15:04:30.693Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "ChiTietDonHangTam.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Models\\ChiTietDonHangTam.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Models\\ChiTietDonHangTam.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Models\\ChiTietDonHangTam.cs",
+              "RelativeToolTip": "TraSuaApp\\Models\\ChiTietDonHangTam.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T14:59:57.691Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "VoucherCuaBan.cs [Design]",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\VoucherCuaBan.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\VoucherCuaBan.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\VoucherCuaBan.cs [Design]",
+              "RelativeToolTip": "TraSuaApp\\Views\\VoucherCuaBan.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T14:02:48.015Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "Home1.Designer.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\Home1.Designer.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\Home1.Designer.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\Home1.Designer.cs",
+              "RelativeToolTip": "TraSuaApp\\Views\\Home1.Designer.cs",
+              "ViewState": "AQIAABwBAAAAAAAAAAAAAB8BAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T15:03:37.419Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "SanPhamNew.cs [Design]",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\SanPhamNew.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\SanPhamNew.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\SanPhamNew.cs [Design]",
+              "RelativeToolTip": "TraSuaApp\\Views\\SanPhamNew.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T14:34:55.593Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "SanPhamHot.cs [Design]",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\SanPhamHot.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\SanPhamHot.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\SanPhamHot.cs [Design]",
+              "RelativeToolTip": "TraSuaApp\\Views\\SanPhamHot.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T09:43:36.174Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "ThongTinTaiKhoan.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\ThongTinTaiKhoan.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\ThongTinTaiKhoan.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\ThongTinTaiKhoan.cs",
+              "RelativeToolTip": "TraSuaApp\\Views\\ThongTinTaiKhoan.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAAABIAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T09:10:15.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "LienHe.cs [Design]",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\LienHe.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\LienHe.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\LienHe.cs [Design]",
+              "RelativeToolTip": "TraSuaApp\\Views\\LienHe.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T10:35:53.733Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "ChiTietDonHang.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Models\\ChiTietDonHang.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Models\\ChiTietDonHang.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Models\\ChiTietDonHang.cs",
+              "RelativeToolTip": "TraSuaApp\\Models\\ChiTietDonHang.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T14:30:52.15Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "DanhGia.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Models\\DanhGia.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Models\\DanhGia.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Models\\DanhGia.cs",
+              "RelativeToolTip": "TraSuaApp\\Models\\DanhGia.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAAABkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T15:31:26.413Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeDocumentMoniker": "..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeToolTip": "..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AQIAACcNAAAAAAAAAAAYwDkNAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-05-15T16:41:56.255Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "ChiTietSanPham.Designer.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\ChiTietSanPham.Designer.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\ChiTietSanPham.Designer.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\ChiTietSanPham.Designer.cs",
+              "RelativeToolTip": "TraSuaApp\\Views\\ChiTietSanPham.Designer.cs",
+              "ViewState": "AQIAAMsBAAAAAAAAAAAAAMsBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T16:17:39.088Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "KhuyenMai.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Models\\KhuyenMai.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Models\\KhuyenMai.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Models\\KhuyenMai.cs",
+              "RelativeToolTip": "TraSuaApp\\Models\\KhuyenMai.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAABEAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T11:24:29.48Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "SanPhamHot.Designer.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\SanPhamHot.Designer.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\SanPhamHot.Designer.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\SanPhamHot.Designer.cs",
+              "RelativeToolTip": "TraSuaApp\\Views\\SanPhamHot.Designer.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAAAEkAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T15:48:59.327Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "ChiTietDonHangUser.Designer.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\ChiTietDonHangUser.Designer.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\ChiTietDonHangUser.Designer.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\ChiTietDonHangUser.Designer.cs",
+              "RelativeToolTip": "TraSuaApp\\Views\\ChiTietDonHangUser.Designer.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAnwCwAAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T10:11:14.154Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "Menu.Designer.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\View\\Menu.Designer.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\View\\Menu.Designer.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\View\\Menu.Designer.cs",
+              "RelativeToolTip": "TraSuaApp\\View\\Menu.Designer.cs",
+              "ViewState": "AQIAAFkAAAAAAAAAAAAAAGIAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T09:01:13.5Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "SanPhamDaMua.cs [Design]",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\View\\SanPhamDaMua.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\View\\SanPhamDaMua.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\View\\SanPhamDaMua.cs [Design]",
+              "RelativeToolTip": "TraSuaApp\\View\\SanPhamDaMua.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T15:56:23.492Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "SanPhamDaMua.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\View\\SanPhamDaMua.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\View\\SanPhamDaMua.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\View\\SanPhamDaMua.cs",
+              "RelativeToolTip": "TraSuaApp\\View\\SanPhamDaMua.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAIA4wBcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T16:00:02.394Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "Menu.cs [Design]",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\View\\Menu.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\View\\Menu.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\View\\Menu.cs [Design]",
+              "RelativeToolTip": "TraSuaApp\\View\\Menu.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T17:48:59.662Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "ThongTinTaiKhoan.cs [Design]",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\View\\ThongTinTaiKhoan.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\View\\ThongTinTaiKhoan.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\View\\ThongTinTaiKhoan.cs [Design]",
+              "RelativeToolTip": "TraSuaApp\\View\\ThongTinTaiKhoan.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T15:25:53.407Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "ChiTietSanPham.cs [Design]",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\View\\ChiTietSanPham.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\View\\ChiTietSanPham.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\View\\ChiTietSanPham.cs [Design]",
+              "RelativeToolTip": "TraSuaApp\\View\\ChiTietSanPham.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T10:03:40.149Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "DanhGia.cs [Design]",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\View\\DanhGia.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\View\\DanhGia.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\View\\DanhGia.cs [Design]",
+              "RelativeToolTip": "TraSuaApp\\View\\DanhGia.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T15:27:17.229Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "LienHe.cs [Design]",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\View\\LienHe.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\View\\LienHe.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\View\\LienHe.cs [Design]",
+              "RelativeToolTip": "TraSuaApp\\View\\LienHe.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T15:27:29.245Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "LienHe.Designer.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\View\\LienHe.Designer.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\View\\LienHe.Designer.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\View\\LienHe.Designer.cs",
+              "RelativeToolTip": "TraSuaApp\\View\\LienHe.Designer.cs",
+              "ViewState": "AQIAAIwCAAAAAAAAAAAnwIwCAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T10:47:22.014Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "DanhGia.Designer.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\View\\DanhGia.Designer.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\View\\DanhGia.Designer.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\View\\DanhGia.Designer.cs",
+              "RelativeToolTip": "TraSuaApp\\View\\DanhGia.Designer.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAQwBYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T16:41:42.238Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "ThongTinTaiKhoan.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\View\\ThongTinTaiKhoan.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\View\\ThongTinTaiKhoan.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\View\\ThongTinTaiKhoan.cs",
+              "RelativeToolTip": "TraSuaApp\\View\\ThongTinTaiKhoan.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAYwBUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T16:01:50.411Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "ChiTietSanPham.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\View\\ChiTietSanPham.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\View\\ChiTietSanPham.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\View\\ChiTietSanPham.cs",
+              "RelativeToolTip": "TraSuaApp\\View\\ChiTietSanPham.cs",
+              "ViewState": "AQIAAFMAAAAAAAAAAAAAAGkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T10:13:17.456Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "ChiTietSanPham.Designer.cs",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\View\\ChiTietSanPham.Designer.cs",
+              "RelativeDocumentMoniker": "TraSuaApp\\View\\ChiTietSanPham.Designer.cs",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\View\\ChiTietSanPham.Designer.cs",
+              "RelativeToolTip": "TraSuaApp\\View\\ChiTietSanPham.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T10:01:09.192Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "Home1.resx",
+              "DocumentMoniker": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\Home1.resx",
+              "RelativeDocumentMoniker": "TraSuaApp\\Views\\Home1.resx",
+              "ToolTip": "C:\\Laptrinhmangcanban\\TraSuaApp\\TraSuaApp\\Views\\Home1.resx",
+              "RelativeToolTip": "TraSuaApp\\Views\\Home1.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-05-12T09:05:26.826Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
