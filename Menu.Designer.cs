@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -172,12 +172,12 @@
             guna2Panel7.Controls.Add(guna2ImageButton1);
             guna2Panel7.Controls.Add(cbLoc);
             guna2Panel7.Controls.Add(tbTimKiem);
-            guna2Panel7.CustomizableEdges = customizableEdges15;
+            guna2Panel7.CustomizableEdges = customizableEdges7;
             guna2Panel7.Dock = DockStyle.Top;
             guna2Panel7.FillColor = Color.Transparent;
             guna2Panel7.Location = new Point(0, 0);
             guna2Panel7.Name = "guna2Panel7";
-            guna2Panel7.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            guna2Panel7.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2Panel7.Size = new Size(1456, 105);
             guna2Panel7.TabIndex = 9;
             // 
@@ -189,12 +189,13 @@
             guna2ImageButton2.ImageOffset = new Point(0, 0);
             guna2ImageButton2.ImageRotate = 0F;
             guna2ImageButton2.ImageSize = new Size(55, 55);
-            guna2ImageButton2.Location = new Point(1091, 34);
+            guna2ImageButton2.Location = new Point(1153, 34);
             guna2ImageButton2.Name = "guna2ImageButton2";
             guna2ImageButton2.PressedState.ImageSize = new Size(64, 64);
-            guna2ImageButton2.ShadowDecoration.CustomizableEdges = customizableEdges9;
+            guna2ImageButton2.ShadowDecoration.CustomizableEdges = customizableEdges1;
             guna2ImageButton2.Size = new Size(65, 58);
             guna2ImageButton2.TabIndex = 4;
+            guna2ImageButton2.Click += guna2ImageButton2_Click;
             // 
             // guna2ImageButton1
             // 
@@ -207,16 +208,17 @@
             guna2ImageButton1.Location = new Point(821, 34);
             guna2ImageButton1.Name = "guna2ImageButton1";
             guna2ImageButton1.PressedState.ImageSize = new Size(64, 64);
-            guna2ImageButton1.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna2ImageButton1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2ImageButton1.Size = new Size(59, 53);
             guna2ImageButton1.TabIndex = 3;
+            guna2ImageButton1.Click += guna2ImageButton1_Click_1;
             // 
             // cbLoc
             // 
             cbLoc.BackColor = Color.Transparent;
             cbLoc.BorderRadius = 15;
             cbLoc.BorderThickness = 2;
-            cbLoc.CustomizableEdges = customizableEdges11;
+            cbLoc.CustomizableEdges = customizableEdges3;
             cbLoc.DrawMode = DrawMode.OwnerDrawFixed;
             cbLoc.DropDownStyle = ComboBoxStyle.DropDownList;
             cbLoc.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -225,9 +227,9 @@
             cbLoc.ForeColor = Color.Black;
             cbLoc.ItemHeight = 30;
             cbLoc.Items.AddRange(new object[] { "Tất cả", "Trà", "Trà Sữa", "Bánh ngọt", "Topping", "Cà phê", "Khác" });
-            cbLoc.Location = new Point(921, 45);
+            cbLoc.Location = new Point(983, 45);
             cbLoc.Name = "cbLoc";
-            cbLoc.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            cbLoc.ShadowDecoration.CustomizableEdges = customizableEdges4;
             cbLoc.Size = new Size(164, 36);
             cbLoc.TabIndex = 2;
             // 
@@ -235,7 +237,7 @@
             // 
             tbTimKiem.BorderRadius = 20;
             tbTimKiem.BorderThickness = 3;
-            tbTimKiem.CustomizableEdges = customizableEdges13;
+            tbTimKiem.CustomizableEdges = customizableEdges5;
             tbTimKiem.DefaultText = "";
             tbTimKiem.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             tbTimKiem.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -250,7 +252,7 @@
             tbTimKiem.Name = "tbTimKiem";
             tbTimKiem.PlaceholderText = "Nhập tên sản phẩm cần tìm...";
             tbTimKiem.SelectedText = "";
-            tbTimKiem.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            tbTimKiem.ShadowDecoration.CustomizableEdges = customizableEdges6;
             tbTimKiem.Size = new Size(727, 47);
             tbTimKiem.TabIndex = 0;
             // 
@@ -286,5 +288,6 @@
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
         private Guna.UI2.WinForms.Guna2ComboBox cbLoc;
         private Guna.UI2.WinForms.Guna2TextBox tbTimKiem;
+        private Guna.UI2.WinForms.Guna2WinProgressIndicator loadingSpinner;
     }
 }

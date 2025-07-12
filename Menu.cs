@@ -1,96 +1,80 @@
 ﻿using Google.Cloud.Firestore;
+using Guna.UI2.WinForms;
 using Models;
-using Models.Admin;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using TheArtOfDevHtmlRenderer.Adapters;
 using TraSuaApp.Models;
 using TraSuaApp.Services;
-using TraSuaApp.Views;
-using static Google.Cloud.Firestore.V1.StructuredQuery.Types;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
-namespace TraSuaApp
+namespace TraSuaApp.View
 {
     public partial class Menu : Form
     {
-        private ChiTietDonHangUser formDonHang;
+        private CancellationTokenSource _cts;
+        private FirestoreChangeListener listener;
+        private DonHangUser donhang;
         private List<SanPham> danhSachSanPham = new(); // Khai báo danh sách toàn cục
-
-        // Các hằng số và hàm cho việc kéo form
-        public const int WM_NCLBUTTONDOWN = 0xA1;
-        public const int HTCAPTION = 0x2;
-
-        [DllImport("user32.dll")]
-        public static extern bool ReleaseCapture();
-
-        [DllImport("user32.dll")]
-        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
-
-        public Menu(ChiTietDonHangUser donhang)
+        private ListBox listBoxGoiY;
+        public Menu(DonHangUser formDonHang)
         {
             InitializeComponent();
-            this.guna2Panel1.MouseDown += Form_MouseDown;
-            this.Padding = new Padding(3);
-            formDonHang = donhang;
-        }
+            this.FormClosing += Menu_FormClosing;
+            tbTimKiem.TextChanged += TbTimKiem_TextChanged;
+            loadingSpinner = new Guna.UI2.WinForms.Guna2WinProgressIndicator();
+            loadingSpinner.Name = "loadingSpinner";
+            loadingSpinner.Size = new Size(60, 60);
+            loadingSpinner.CircleSize = 1.0F;
+            loadingSpinner.ProgressColor = Color.FromArgb(255, 141, 31);
+            loadingSpinner.BackColor = Color.Transparent;
+            loadingSpinner.Visible = false;
 
-        private void Form_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
+            // Canh giữa form
+            loadingSpinner.Location = new Point(this.Width / 2 - loadingSpinner.Width / 2, this.Height / 2 - loadingSpinner.Height / 2);
+            loadingSpinner.Anchor = AnchorStyles.None;
+
+            this.Controls.Add(loadingSpinner);
+            loadingSpinner.BringToFront();  // Bảo đảm nằm trên cùng
+
+            donhang = formDonHang;
+
+            // Khởi tạo ListBox
+            listBoxGoiY = new ListBox
             {
-                ReleaseCapture();
-                SendMessage(this.Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0);
-            }
+                Visible = false,
+                Height = 100,
+                Width = tbTimKiem.Width,
+                BackColor = Color.White,
+                ForeColor = Color.Black,
+            };
+
+            // Lấy vị trí tuyệt đối trên màn hình
+            Point screenPos = tbTimKiem.PointToScreen(Point.Empty);
+
+            // Chuyển thành tọa độ theo Form
+            Point formPos = this.PointToClient(screenPos);
+
+            // Đặt vị trí listBox ngay dưới tbTimKiem, căn chuẩn
+            listBoxGoiY.Location = new Point(formPos.X + 41, formPos.Y + 24 + tbTimKiem.Height);
+
+            // Add listbox vào form gốc (không phải panel)
+            this.Controls.Add(listBoxGoiY);
+            listBoxGoiY.BringToFront();
+
+            // Gắn sự kiện click
+            listBoxGoiY.Click += ListBoxGoiY_Click;
         }
 
-        // Tạo khả năng resize form viền
-        protected override void WndProc(ref Message m)
-        {
-            const int resizeAreaSize = 10;
-            const int HTLEFT = 10, HTRIGHT = 11, HTTOP = 12, HTTOPLEFT = 13, HTTOPRIGHT = 14;
-            const int HTBOTTOM = 15, HTBOTTOMLEFT = 16, HTBOTTOMRIGHT = 17;
-            const int WM_NCHITTEST = 0x84;
 
-            if (m.Msg == WM_NCHITTEST)
-            {
-                base.WndProc(ref m);
-
-                Point screenPoint = new Point(m.LParam.ToInt32());
-                Point clientPoint = this.PointToClient(screenPoint);
-
-                if (clientPoint.Y <= resizeAreaSize)
-                {
-                    if (clientPoint.X <= resizeAreaSize)
-                        m.Result = (IntPtr)HTTOPLEFT;
-                    else if (clientPoint.X >= (this.Width - resizeAreaSize))
-                        m.Result = (IntPtr)HTTOPRIGHT;
-                    else
-                        m.Result = (IntPtr)HTTOP;
-                }
-                else if (clientPoint.Y >= (this.Height - resizeAreaSize))
-                {
-                    if (clientPoint.X <= resizeAreaSize)
-                        m.Result = (IntPtr)HTBOTTOMLEFT;
-                    else if (clientPoint.X >= (this.Width - resizeAreaSize))
-                        m.Result = (IntPtr)HTBOTTOMRIGHT;
-                    else
-                        m.Result = (IntPtr)HTBOTTOM;
-                }
-                else
-                {
-                    if (clientPoint.X <= resizeAreaSize)
-                        m.Result = (IntPtr)HTLEFT;
-                    else if (clientPoint.X >= (this.Width - resizeAreaSize))
-                        m.Result = (IntPtr)HTRIGHT;
-                }
-                return;
-            }
-
-            base.WndProc(ref m);
-        }
 
         private async void LoadImageAsync(string imageUrl, PictureBox pictureBox)
         {
@@ -133,22 +117,28 @@ namespace TraSuaApp
 
             foreach (var sp in locDanhSach)
             {
-                Panel panel = new Panel
+                Guna2GradientPanel panel = new Guna2GradientPanel
                 {
-                    BackColor = Color.PeachPuff,
-                    Width = 280,
-                    Height = 430,
-                    Margin = new Padding(10)
+                    BackColor = Color.Transparent,
+                    Size = new Size(235, 360),
+                    FillColor = Color.FromArgb(255, 192, 125),
+                    FillColor2 = Color.FromArgb(208, 241, 255),
+                    GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal,
+                    BorderColor = Color.FromArgb(255, 162, 2),
+                    BorderRadius = 20,
+                    BorderThickness = 4,
+                    BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash,
+                    Margin = new Padding(30, 30, 30, 0)
                 };
 
-                PictureBox pic = new PictureBox
+                Guna2PictureBox pic = new Guna2PictureBox
                 {
-                    Width = 270,
-                    Height = 280,
-                    Top = 3,
-                    Left = (panel.Width - 270) / 2,
+                    Size = new Size(220, 208),
+                    Location = new Point(8, 17),
                     SizeMode = PictureBoxSizeMode.Zoom,
-                    BackColor = Color.Transparent
+                    BackColor = Color.Transparent,
+                    BorderRadius = 20,
+
                 };
 
                 string imageUrl = sp.HinhAnh; // Lấy URL ảnh từ Firestore
@@ -163,54 +153,71 @@ namespace TraSuaApp
                     MessageBox.Show("Không có URL ảnh để tải.");
                 }
 
-                Label ten = new Label
+                Guna2HtmlLabel ten = new Guna2HtmlLabel
                 {
-                    Text = sp.TenSP,
-                    Top = pic.Bottom + 10,
-                    Left = 0,
-                    Width = panel.Width,
-                    Height = 40,
-                    TextAlign = ContentAlignment.MiddleCenter,
-                    Font = new Font("Segoe UI", 15, FontStyle.Bold),
-                    AutoSize = false
+                    Text = $"{sp.TenSP}</div>",
+                    Location = new Point(20, 235),
+                    Font = new Font("Segoe UI", 12, FontStyle.Bold),
+                    ForeColor = Color.FromArgb(20, 44, 161),
+                    AutoSize = false,
+                    Size = new Size(150, 35),
                 };
 
-                Label gia = new Label
+                Guna2HtmlLabel gia = new Guna2HtmlLabel
                 {
-                    Text = sp.Gia.ToString("N0") + " đ",
-                    Top = ten.Bottom,
-                    Left = 0,
-                    Width = panel.Width,
-                    Height = 28,
-                    TextAlign = ContentAlignment.MiddleCenter,
-                    ForeColor = Color.Green,
-                    Font = new Font("Segoe UI", 12, FontStyle.Regular),
-                    AutoSize = false
+                    Text = $"{sp.Gia.ToString("N0")} VND</div>",
+                    ForeColor = Color.FromArgb(0, 22, 61),
+                    Font = new Font("Segoe UI Semibold", 11, FontStyle.Bold),
+                    Location = new Point(25, 265),
+                    AutoSize = false,
+                    Size = new Size(150, 38),
                 };
 
+                Color tt;
+
+                if (sp.TrangThai != "Còn hàng")
+                {
+                    tt = Color.Red;
+                }
+                else tt = Color.DarkGreen;
+
+                // Tạo Panel để chứa Label và bo góc
+                Guna2Panel panel1 = new Guna2Panel
+                {
+                    Size = new Size(180, 35),
+                    BorderRadius = 10,     // Bo góc 7
+                    FillColor = Color.FromArgb(100, 255, 255, 255),
+                    Padding = new Padding(20, 0, 0, 3)
+                };
+
+                // Tạo Guna2HtmlLabel
                 Label trangThai = new Label
                 {
                     Text = sp.TrangThai,
-                    AutoSize = true,
-                    BackColor = Color.FromArgb(180, Color.White),
-                    ForeColor = Color.DarkGreen,
-                    Font = new Font("Segoe UI", 15, FontStyle.Bold)
+                    AutoSize = false,
+                    Size = new Size(180, 35),
+                    BackColor = Color.Transparent,  // Để nền trong suốt
+                    ForeColor = tt,
+                    Font = new Font("Segoe UI", 12, FontStyle.Bold),
+                    TextAlign = ContentAlignment.MiddleLeft,
+                    Padding = new Padding(10, 0, 0, 0) // Điều chỉnh thụt vào bên trái
                 };
 
-                trangThai.Parent = panel;
-                trangThai.Left = panel.Width - trangThai.PreferredWidth + 5;
+                panel1.Controls.Add(trangThai);
+                panel1.Parent = panel;
+                panel1.Left = panel.Width - 140;
 
-                Button btnThem = new Button
+                Guna2TileButton btnThem = new Guna2TileButton
                 {
-                    Text = "Thêm vào đơn hàng",
-                    Width = 280,
-                    Height = 53,
-                    Left = 0,
-                    Top = gia.Bottom + 16,
-                    BackColor = Color.FromArgb(255, 165, 0),
+                    Text = "THÊM NGAY",
+                    Size = new Size(180, 40),
+                    FillColor = Color.FromArgb(255, 141, 31),
+                    Location = new Point(30, 304),
                     ForeColor = Color.White,
-                    FlatStyle = FlatStyle.Flat,
-                    Font = new Font("Segoe UI", 12, FontStyle.Bold)
+                    Font = new Font("Segoe UI", 10, FontStyle.Bold),
+                    BorderColor = Color.GhostWhite,
+                    BorderRadius = 10,
+                    BorderThickness = 2,
                 };
 
                 btnThem.Click += (s, e) =>
@@ -226,26 +233,25 @@ namespace TraSuaApp
                     MessageBox.Show($"Đã thêm {sp.TenSP} vào đơn hàng!");
                 };
 
-                panel.Controls.Add(trangThai);
-                panel.Controls.Add(pic);
                 panel.Controls.Add(ten);
                 panel.Controls.Add(gia);
+                panel.Controls.Add(panel1);
+                panel.Controls.Add(pic);
+
                 panel.Controls.Add(btnThem);
 
                 panel.Tag = sp;
-
-                // Gán sự kiện cho hiệu ứng hover
-                AddHoverEffectToAllControls(panel, panel);
 
                 // Gán sự kiện click toàn vùng panel
                 panel.Click += MoChiTietSanPham;
 
                 // Gán sự kiện click cho các control con
+
                 foreach (Control ctrl in panel.Controls)
                 {
                     if (!(ctrl is Button))
                     {
-                        ctrl.Click += MoChiTietSanPham;
+                        //ctrl.Click += MoChiTietSanPham;
                     }
                 }
 
@@ -253,25 +259,7 @@ namespace TraSuaApp
             }
         }
 
-        // Hàm gán hiệu ứng hover cho panel và toàn bộ control con
-        private void AddHoverEffectToAllControls(Control parent, Panel panelToChangeColor)
-        {
-            parent.MouseEnter += (s, e) => panelToChangeColor.BackColor = Color.Orange;
-            parent.MouseLeave += (s, e) =>
-            {
-                // Kiểm tra nếu chuột thực sự đã rời khỏi toàn bộ panel
-                Point cursorPos = panelToChangeColor.PointToClient(Cursor.Position);
-                if (!panelToChangeColor.ClientRectangle.Contains(cursorPos))
-                {
-                    panelToChangeColor.BackColor = Color.PeachPuff;
-                }
-            };
 
-            foreach (Control ctrl in parent.Controls)
-            {
-                AddHoverEffectToAllControls(ctrl, panelToChangeColor); // Gọi đệ quy cho các control con
-            }
-        }
 
         private void MoChiTietSanPham(object sender, EventArgs e)
         {
@@ -284,15 +272,21 @@ namespace TraSuaApp
             {
                 try
                 {
-                    var form = new ChiTietSanPham(sp, formDonHang);
+                    pnlHienThiMenu.Controls.Clear();
+                    ChiTietSanPham form = new ChiTietSanPham(sp, donhang)
+                    {
+                        TopLevel = false,         // Đặt form con không phải là cửa sổ cấp cao nhất
+                        Dock = DockStyle.Fill      // Hiển thị full trong panel
+                    };
+                    pnlHienThiMenu.Controls.Add(form);
                     form.Show();
+
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Lỗi khi mở form: " + ex.Message);
+                    MessageBox.Show("Lỗi không xem được chi tiết sản phẩm: " + ex.Message);
                 }
             }
-            this.Hide();
         }
 
 
@@ -310,102 +304,107 @@ namespace TraSuaApp
                 ThanhTien = sp.Gia
             };
 
-            formDonHang.ThemChiTietVaoGiaoDien(ct);
+            donhang.ThemChiTietVaoGiaoDien(ct);
         }
 
-
-
-        private async void Menu_Load(object sender, EventArgs e)
+        private void Menu_Load(object sender, EventArgs e)
         {
-            try
+            loadingSpinner.Visible = true;
+            loadingSpinner.Start();
+            Application.DoEvents();
+
+            var db = DBServices.Connect();
+            _cts = new CancellationTokenSource();
+
+            // Lắng nghe theo thời gian thực
+            db.Collection("SanPham").Listen(snapshot =>
             {
-                FirestoreDb db = DBServices.Connect();
-                if (db == null)
+                var list = snapshot.Documents.Select(doc =>
                 {
-                    MessageBox.Show("Không kết nối được với Firestore.");
-                    return;
-                }
+                    var sp = doc.ConvertTo<SanPham>();
+                    sp.ID = doc.Id;
+                    return sp;
+                }).ToList();
 
-                Query query = db.Collection("SanPham");
-                QuerySnapshot snapshot = await query.GetSnapshotAsync();
-
-                List<SanPham> danhSach = new();
-
-                foreach (DocumentSnapshot doc in snapshot.Documents)
+                this.Invoke(() =>
                 {
-                    if (doc.Exists)
-                    {
-                        SanPham sp = doc.ConvertTo<SanPham>();
-                        sp.ID = doc.Id; // Gán ID document làm mã sản phẩm (nếu chưa có)
-                        danhSach.Add(sp);
-                    }
-                }
-
-                if (danhSach.Any())
-                {
-                    danhSachSanPham = danhSach;
+                    danhSachSanPham = list;
                     HienThiSanPham(danhSachSanPham);
-                }
-                else
-                {
-                    MessageBox.Show("Không có dữ liệu sản phẩm trong Firestore.");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi khi tải sản phẩm từ Firestore: " + ex.Message);
-            }
+                    loadingSpinner.Stop();
+                    loadingSpinner.Visible = false;
+                });
+            }, _cts.Token); // truyền vào CancellationToken
+        }
+
+        private void Menu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _cts?.Cancel();
+            _cts?.Dispose();
         }
 
 
-        private void btnTimKiem_Click(object sender, EventArgs e)
+        private void ListBoxGoiY_Click(object sender, EventArgs e)
+        {
+            if (listBoxGoiY.SelectedItem != null)
+            {
+                tbTimKiem.Text = listBoxGoiY.SelectedItem.ToString();
+                listBoxGoiY.Visible = false;
+                HienThiSanPham(danhSachSanPham, tuKhoa: tbTimKiem.Text.Trim());
+            }
+        }
+
+        private void TbTimKiem_KeyUp(object sender, KeyEventArgs e)
+        {
+            // Gọi gợi ý mỗi lần người dùng nhấn phím
+            HienThiGoiY(tbTimKiem.Text);
+        }
+
+        private void TbTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            // Trường hợp người dùng paste văn bản
+            HienThiGoiY(tbTimKiem.Text);
+        }
+
+        private void HienThiGoiY(string tuKhoa)
+        {
+            tuKhoa = tuKhoa.Trim().ToLower();
+
+            if (string.IsNullOrEmpty(tuKhoa))
+            {
+                listBoxGoiY.Visible = false;
+                return;
+            }
+
+            // Lọc danh sách sản phẩm theo tên gần đúng
+            var goiY = danhSachSanPham
+                .Where(sp => !string.IsNullOrEmpty(sp.TenSP) && sp.TenSP.ToLower().Contains(tuKhoa))
+                .Select(sp => sp.TenSP)
+                .Distinct()
+                .Take(10)
+                .ToList();
+
+            if (goiY.Any())
+            {
+                listBoxGoiY.DataSource = goiY;
+                listBoxGoiY.Visible = true;
+            }
+            else
+            {
+                listBoxGoiY.Visible = false;
+            }
+        }
+
+        private void guna2ImageButton1_Click_1(object sender, EventArgs e)
         {
             string tuKhoa = tbTimKiem.Text.Trim();
             HienThiSanPham(danhSachSanPham, tuKhoa: tuKhoa);
         }
 
-        private void btnLoc_Click(object sender, EventArgs e)
+        private void guna2ImageButton2_Click(object sender, EventArgs e)
         {
             string loai = cbLoc.SelectedItem?.ToString() ?? "Tất cả"; // Lấy loại từ ComboBox
             string tuKhoa = tbTimKiem.Text.Trim(); // Lấy từ khóa tìm kiếm
             HienThiSanPham(danhSachSanPham, loai: loai, tuKhoa: tuKhoa); // Gọi phương thức lọc
-        }
-
-        private void btn_DonHang_Click(object sender, EventArgs e)
-        {
-            this.Hide(); // Ẩn form Menu
-
-            // Hiện form đơn hàng dưới dạng modal (có thể chỉnh lại thành .Show nếu muốn song song)
-            formDonHang.Show();
-        }
-
-        private void guna2ControlBox3_Click(object sender, EventArgs e)
-        {
-            Application.Exit(); // Đóng tất cả các form và thoát chương trình
-        }
-
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            Application.OpenForms["Home"].Show();
-            this.Hide();
-        }
-
-        private void btnLienHe_Click(object sender, EventArgs e)
-        {
-            LienHeUser lienhe = new LienHeUser();
-            lienhe.Size = this.Size;
-            lienhe.Location = this.Location;
-            lienhe.Show();
-            this.Hide();
-        }
-
-        private void btnTaiKhoan_Click(object sender, EventArgs e)
-        {
-            ThongTinTaiKhoan taiKhoan = new ThongTinTaiKhoan();
-            taiKhoan.Size = this.Size;
-            taiKhoan.Location = this.Location;
-            taiKhoan.Show();
-            this.Hide();
         }
     }
 }
