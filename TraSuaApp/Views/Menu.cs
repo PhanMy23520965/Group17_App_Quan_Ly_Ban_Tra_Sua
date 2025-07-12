@@ -1,4 +1,4 @@
-﻿using Google.Cloud.Firestore;
+using Google.Cloud.Firestore;
 using Guna.UI2.WinForms;
 using Models;
 using System;
@@ -20,12 +20,15 @@ namespace TraSuaApp.View
 {
     public partial class Menu : Form
     {
+        private CancellationTokenSource _cts;
+        private FirestoreChangeListener listener;
         private DonHangUser donhang;
         private List<SanPham> danhSachSanPham = new(); // Khai báo danh sách toàn cục
         private ListBox listBoxGoiY;
         public Menu(DonHangUser formDonHang)
         {
             InitializeComponent();
+            this.FormClosing += Menu_FormClosing;
             tbTimKiem.TextChanged += TbTimKiem_TextChanged;
             loadingSpinner = new Guna.UI2.WinForms.Guna2WinProgressIndicator();
             loadingSpinner.Name = "loadingSpinner";
@@ -61,7 +64,7 @@ namespace TraSuaApp.View
             Point formPos = this.PointToClient(screenPos);
 
             // Đặt vị trí listBox ngay dưới tbTimKiem, căn chuẩn
-            listBoxGoiY.Location = new Point(formPos.X + 41, formPos.Y + 24 + tbTimKiem.Height);
+            listBoxGoiY.Location = new Point(formPos.X + 50, formPos.Y + 30 + tbTimKiem.Height);
 
             // Add listbox vào form gốc (không phải panel)
             this.Controls.Add(listBoxGoiY);
@@ -304,23 +307,18 @@ namespace TraSuaApp.View
             donhang.ThemChiTietVaoGiaoDien(ct);
         }
 
-        private async void Menu_Load(object sender, EventArgs e)
+        private void Menu_Load(object sender, EventArgs e)
         {
             loadingSpinner.Visible = true;
             loadingSpinner.Start();
-            Application.DoEvents(); // ép hiển thị spinner
+            Application.DoEvents();
 
-            await Task.Run(async () =>
+            var db = DBServices.Connect();
+            _cts = new CancellationTokenSource();
+
+            // Lắng nghe theo thời gian thực
+            db.Collection("SanPham").Listen(snapshot =>
             {
-                // Task background
-                var db = DBServices.Connect();
-                if (db == null)
-                {
-                    Invoke(() => MessageBox.Show("Không kết nối được với Firestore."));
-                    return;
-                }
-
-                var snapshot = await db.Collection("SanPham").GetSnapshotAsync();
                 var list = snapshot.Documents.Select(doc =>
                 {
                     var sp = doc.ConvertTo<SanPham>();
@@ -328,16 +326,22 @@ namespace TraSuaApp.View
                     return sp;
                 }).ToList();
 
-                Invoke(() =>
+                this.Invoke(() =>
                 {
                     danhSachSanPham = list;
                     HienThiSanPham(danhSachSanPham);
+                    loadingSpinner.Stop();
+                    loadingSpinner.Visible = false;
                 });
-            });
-
-            loadingSpinner.Stop();
-            loadingSpinner.Visible = false;
+            }, _cts.Token); // truyền vào CancellationToken
         }
+
+        private void Menu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _cts?.Cancel();
+            _cts?.Dispose();
+        }
+
 
         private void ListBoxGoiY_Click(object sender, EventArgs e)
         {
