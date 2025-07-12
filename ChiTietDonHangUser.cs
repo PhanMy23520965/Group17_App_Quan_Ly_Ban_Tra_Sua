@@ -1,105 +1,45 @@
 ﻿using Google.Cloud.Firestore;
+using Guna.UI2.WinForms;
 using Models.Admin;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TraSuaApp.Models;
-using TraSuaApp.Services;
 using TraSuaApp.Models.Admin;
+using TraSuaApp.Services;
 
-namespace TraSuaApp
+namespace TraSuaApp.View
 {
-    
-    public partial class ChiTietDonHangUser : Form
+    public partial class DonHangUser : Form
     {
-        private Menu formSanPham;
         public List<ChiTietDonHangTam> danhSachTam = new();
-        public const int WM_NCLBUTTONDOWN = 0xA1;
-        public const int HTCAPTION = 0x2;
-
-        [DllImport("user32.dll")]
-        public static extern bool ReleaseCapture();
-
-        [DllImport("user32.dll")]
-        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
-        public ChiTietDonHangUser()
+        public DonHangUser()
         {
             InitializeComponent();
-            this.guna2Panel1.MouseDown += Form_MouseDown;
-            this.Padding = new Padding(3);
-            formSanPham = new Menu(this);
+            KiemTraTrong(flowDonHang);
+            CapNhapScrollMinSize(flowDonHang);
         }
-        // Tạo khả năng kéo thả cho form
-        private void Form_MouseDown(object sender, MouseEventArgs e)
+
+        private void KiemTraTrong(FlowLayoutPanel flowPanel)
         {
-            if (e.Button == MouseButtons.Left)
+            // Kiểm tra nếu không có control nào bên trong
+            foreach (Control ct in flowPanel.Controls)
             {
-                ReleaseCapture();
-                SendMessage(this.Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0);
+                if (ct is Panel)
+                {
+                    lblTrong.Visible = false;  // An flowLayoutPanel
+                    return;
+                }
             }
+            lblTrong.Visible = true;   // HienThi nếu có control
         }
 
-        //Phóng to, thu nhỏ các viền của form
-        protected override void WndProc(ref Message m)
-        {
-            const int HTLEFT = 10;
-            const int HTRIGHT = 11;
-            const int HTTOP = 12;
-            const int HTTOPLEFT = 13;
-            const int HTTOPRIGHT = 14;
-            const int HTBOTTOM = 15;
-            const int HTBOTTOMLEFT = 16;
-            const int HTBOTTOMRIGHT = 17;
-            const int WM_NCHITTEST = 0x84;
-
-            const int resizeAreaSize = 10; // vùng resize tính từ mép
-
-            if (m.Msg == WM_NCHITTEST)
-            {
-                base.WndProc(ref m);
-
-                Point screenPoint = new Point(m.LParam.ToInt32());
-                Point clientPoint = this.PointToClient(screenPoint);
-
-                if (clientPoint.Y <= resizeAreaSize)
-                {
-                    if (clientPoint.X <= resizeAreaSize)
-                        m.Result = (IntPtr)HTTOPLEFT;
-                    else if (clientPoint.X < (this.Width - resizeAreaSize))
-                        m.Result = (IntPtr)HTTOP;
-                    else
-                        m.Result = (IntPtr)HTTOPRIGHT;
-                }
-                else if (clientPoint.Y <= (this.Height - resizeAreaSize))
-                {
-                    if (clientPoint.X <= resizeAreaSize)
-                        m.Result = (IntPtr)HTLEFT;
-                    else if (clientPoint.X >= (this.Width - resizeAreaSize))
-                        m.Result = (IntPtr)HTRIGHT;
-                }
-                else
-                {
-                    if (clientPoint.X <= resizeAreaSize)
-                        m.Result = (IntPtr)HTBOTTOMLEFT;
-                    else if (clientPoint.X < (this.Width - resizeAreaSize))
-                        m.Result = (IntPtr)HTBOTTOM;
-                    else
-                        m.Result = (IntPtr)HTBOTTOMRIGHT;
-                }
-
-                return;
-            }
-
-            base.WndProc(ref m);
-        }
         private async void LoadImageAsync(string imageUrl, PictureBox pictureBox)
         {
             try
@@ -119,8 +59,16 @@ namespace TraSuaApp
             }
         }
 
+
+        // Hàm tính MinsizeScroll cho flowDonHang
+        private void CapNhapScrollMinSize(FlowLayoutPanel flp)
+        {
+            flp.AutoScrollMinSize = new Size(0, flp.Controls.Count * 175); 
+        }
+
         public void ThemChiTietVaoGiaoDien(ChiTietDonHangTam ct)
         {
+            CapNhapScrollMinSize(flowDonHang);
             // Kiểm tra sản phẩm đã có chưa (dựa trên tên và size)
             var tonTai = danhSachTam.FirstOrDefault(x => x.TenSP == ct.TenSP && x.Size == ct.Size);
 
@@ -136,15 +84,16 @@ namespace TraSuaApp
             else
             {
                 danhSachTam.Add(ct);
+                lblTrong.Visible = false;
                 ThemPanelMoi(ct); // Phương thức thêm panel mới vào FlowLayoutPanel
             }
             CapNhatTongTien();
-
-
         }
 
         private void CapNhatGiaoDienChoSanPham(ChiTietDonHangTam sp)
         {
+            CapNhapScrollMinSize(flowDonHang);
+            KiemTraTrong(flowDonHang);
             foreach (Control c in flowDonHang.Controls)
             {
                 if (c is Panel panel && panel.Tag is ChiTietDonHangTam ct && ct.TenSP == sp.TenSP && ct.Size == sp.Size)
@@ -165,19 +114,17 @@ namespace TraSuaApp
         {
             var panel = new Panel
             {
-                Width = 658,
-                Height = 165,
-                BackColor = Color.Bisque,
-                BorderStyle = BorderStyle.FixedSingle,
+                Size = new Size(954, 150),
+                BackColor = Color.Transparent,
+                Margin = new Padding(3, 3, 3, 15)
             };
 
-            var pic = new PictureBox
+            var pic = new Guna2CirclePictureBox
             {
-                Width = 143,
-                Height = 160,
-                Margin = new Padding(10),
+                Size = new Size(149, 149),
+                Location = new Point(31, 0),
+                Margin = new Padding(3,3,3,25),
                 SizeMode = PictureBoxSizeMode.Zoom,
-                Left = 10,
             };
             string imageUrl = ct.HinhAnh; // Lấy URL ảnh từ Firestore
 
@@ -194,14 +141,16 @@ namespace TraSuaApp
             var lblTen = new Label
             {
                 Text = $"{ct.TenSP}",
-                AutoSize = true,
-                Font = new Font("Segoe UI", 13, FontStyle.Bold),
-                Location = new Point(177, 72)
+                AutoSize = false,
+                Size = new Size(114, 67),
+                Font = new Font("Segoe UI", 12, FontStyle.Bold),
+                Location = new Point(187, 50),
+                TextAlign = ContentAlignment.MiddleCenter,
             };
 
-            RadioButton rbS = new RadioButton { Text = "S", Location = new Point(287, 23), AutoSize = true };
-            RadioButton rbM = new RadioButton { Text = "M", Location = new Point(287, 68), AutoSize = true };
-            RadioButton rbL = new RadioButton { Text = "L", Location = new Point(287, 110), AutoSize = true };
+            RadioButton rbS = new RadioButton { Text = "S", Location = new Point(363, 25), AutoSize = true, ForeColor = Color.Peru, Font = new Font("Segoe UI Black", 10, FontStyle.Bold) };
+            RadioButton rbM = new RadioButton { Text = "M", Location = new Point(363, 63), AutoSize = true, ForeColor = Color.DarkBlue, Font = new Font("Segoe UI Black", 10, FontStyle.Bold) };
+            RadioButton rbL = new RadioButton { Text = "L", Location = new Point(363, 101), AutoSize = true, ForeColor = Color.Brown, Font = new Font("Segoe UI Black", 10, FontStyle.Bold) };
 
             // Gắn CheckedChanged cho RadioButton
             rbS.CheckedChanged += (s, e) => XuLyThayDoiSize(ct, "S", panel);
@@ -213,61 +162,59 @@ namespace TraSuaApp
             else if (ct.Size == "L") rbL.Checked = true;
             else rbS.Checked = true;
 
-            // Label "Số lượng"
-            Label lblSL = new Label { Text = "Số lượng", Location = new Point(389, 20), AutoSize = true };
-
             // Nút trừ
-            Button btnTru = new Button { Text = "-", Width = 34, Height = 38, Location = new Point(347, 61), BackColor = Color.White };
+            Button btnTru = new Button { Text = "-", Size = new Size(43, 43), Location = new Point(452, 68), BackColor = Color.Gray, Font = new Font("Segoe UI", 12, FontStyle.Bold) };
 
             // TextBox số lượng
-            TextBox txtSoLuong = new TextBox
+            Guna2HtmlLabel lbSoLuong = new Guna2HtmlLabel
             {
                 Text = ct.SoLuong.ToString(),
-                Width = 93,
-                Height = 31,
-                Font = new Font("Segoe UI", 11, FontStyle.Regular),
-                Location = new Point(389, 61),
-                TextAlign = HorizontalAlignment.Center
+                AutoSize = false,
+                Size = new Size(17, 34),
+                Font = new Font("Segoe UI", 12, FontStyle.Bold),
+                Location = new Point(508, 72),
             };
 
             // Nút cộng
-            Button btnCong = new Button { Text = "+", Width = 34, Height = 38, Location = new Point(491, 61), BackColor = Color.White };
+            Button btnCong = new Button { Text = "+", Size = new Size(43, 43), Location = new Point(541, 68), BackColor = Color.Gray, Font = new Font("Segoe UI", 12, FontStyle.Bold) };
 
             // Giá
             Label lblThanhTien = new Label
             {
-                Text = ct.ThanhTien.ToString("N0"),
-                Font = new Font("Segoe UI", 11, FontStyle.Regular),
-                ForeColor = Color.DarkGreen,
-                Location = new Point(403, 115),
-                AutoSize = true
+                Text = ct.ThanhTien.ToString("N0") + " VND",
+                Font = new Font("Segoe UI", 12, FontStyle.Bold | FontStyle.Underline),
+                ForeColor = Color.Black,
+                Location = new Point(655, 68),
+                AutoSize = true,
+                TextAlign = ContentAlignment.MiddleRight,
             };
 
-            txtSoLuong.Tag = "SoLuong";
+            lbSoLuong.Tag = "SoLuong";
             lblThanhTien.Tag = "ThanhTien";
 
             // Xử lý tăng/giảm số lượng
             btnCong.Click += (s, e) =>
             {
-                int sl = int.TryParse(txtSoLuong.Text, out var val) ? val : 1;
+                int sl = int.TryParse(lbSoLuong.Text, out var val) ? val : 1;
                 sl++;
-                txtSoLuong.Text = sl.ToString();
+                lbSoLuong.Text = sl.ToString();
                 ct.SoLuong = sl;
                 ct.ThanhTien = TinhThanhTienTheoSize(sl, ct.GiaBan, ct.Size);
-                lblThanhTien.Text = ct.ThanhTien.ToString("N0");
+                lblThanhTien.Text = ct.ThanhTien.ToString("N0") + " VND";
                 CapNhatTongTien();
+                CapNhapScrollMinSize(flowDonHang);
             };
 
             btnTru.Click += (s, e) =>
             {
-                int sl = int.TryParse(txtSoLuong.Text, out var val) ? val : 1;
+                int sl = int.TryParse(lbSoLuong.Text, out var val) ? val : 1;
                 if (sl > 1)
                 {
                     sl--;
-                    txtSoLuong.Text = sl.ToString();
+                    lbSoLuong.Text = sl.ToString();
                     ct.SoLuong = sl;
                     ct.ThanhTien = TinhThanhTienTheoSize(sl, ct.GiaBan, ct.Size);
-                    lblThanhTien.Text = ct.ThanhTien.ToString("N0");
+                    lblThanhTien.Text = ct.ThanhTien.ToString("N0") + " VND";
                     CapNhatTongTien();
                 }
                 else
@@ -277,21 +224,18 @@ namespace TraSuaApp
 
                     // Xóa khỏi giao diện
                     flowDonHang.Controls.Remove(panel);
+                    KiemTraTrong(flowDonHang);
                     CapNhatTongTien(); // cập nhật lại sau khi xóa
                 }
             };
 
-            Button btnXoa = new Button
+            Guna2ImageButton btnXoa = new Guna2ImageButton
             {
-                Text = "Xóa",
-                Width = 89,
-                Height = 166,
-                BackColor = Color.SandyBrown,
-                FlatStyle = FlatStyle.Flat,
-                Location = new Point(568, -2),
-                Font = new Font("Segoe UI", 10, FontStyle.Regular),
+                Image = Properties.Resources.thungrac,
+                Size = new Size(52, 67),
+                Location = new Point(863, 50),
+                ImageSize = new Size(40,40)
             };
-            btnXoa.FlatAppearance.BorderSize = 0;
 
 
             // Thêm các control vào panel
@@ -301,9 +245,8 @@ namespace TraSuaApp
             panel.Controls.Add(rbS);
             panel.Controls.Add(rbM);
             panel.Controls.Add(rbL);
-            panel.Controls.Add(lblSL);
             panel.Controls.Add(btnTru);
-            panel.Controls.Add(txtSoLuong);
+            panel.Controls.Add(lbSoLuong);
             panel.Controls.Add(btnCong);
             panel.Controls.Add(lblThanhTien);
 
@@ -318,6 +261,7 @@ namespace TraSuaApp
 
                 // Xóa khỏi giao diện
                 flowDonHang.Controls.Remove(panel);
+                KiemTraTrong(flowDonHang);
                 CapNhatTongTien(); // cập nhật lại sau khi xóa
             };
         }
@@ -356,7 +300,7 @@ namespace TraSuaApp
                 {
                     if (c is Label lbl && lbl.Tag?.ToString() == "ThanhTien")
                     {
-                        lbl.Text = ct.ThanhTien.ToString("N0");
+                        lbl.Text = ct.ThanhTien.ToString("N0") + " VND";
                         break;
                         CapNhatTongTien();
                     }
@@ -377,20 +321,7 @@ namespace TraSuaApp
         private void CapNhatTongTien()
         {
             double tongTien = danhSachTam.Sum(ct => ct.ThanhTien);
-            lblTongTien.Text = $"{tongTien:N0}";
-        }
-
-
-        private void btnMenu_Click(object sender, EventArgs e)
-        {
-            Menu formMenu = new Menu(this); // tạo mới form Menu
-            formMenu.Show(); // hiển thị form Menu
-            this.Hide();    // đóng form chi tiết hiện tại
-        }
-
-        private void guna2ControlBox9_Click(object sender, EventArgs e)
-        {
-            Application.Exit(); // Đóng tất cả các form và thoát chương trình
+            lblTongTien.Text = $"{tongTien:N0}" + " VND";
         }
 
         private async void btnThanhToan_Click(object sender, EventArgs e)
@@ -454,19 +385,11 @@ namespace TraSuaApp
 
                     await chiTietCollection.Document(chiTietId).SetAsync(ct);
                 }
-
-                // 8. Mở form hóa đơn
-                var hoaDonForm = new ThanhToan(maDonMoi);
-                hoaDonForm.Show();
-                this.Hide();
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Lỗi khi thanh toán: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-
-
     }
 }
