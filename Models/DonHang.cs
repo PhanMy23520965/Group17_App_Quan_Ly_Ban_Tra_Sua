@@ -2,7 +2,7 @@
 using System;
 
 
-namespace Models.Admin
+namespace Models
 {
     [FirestoreData]
     public class DonHang
@@ -12,16 +12,16 @@ namespace Models.Admin
         public string ID { get; set; }
 
         [FirestoreProperty]
-        public string MaKH { get; set; }
+        public string MaKH { get; set; } = "";
 
         [FirestoreProperty]
-        public string MaKM { get; set; }
+        public string MaKM { get; set; } = "";
 
         [FirestoreProperty]
         public DateTime NgayDat { get; set; }
 
         [FirestoreProperty]
-        public long TongTien { get; set; } = 0;
+        public double TongTien { get; set; } = 0;
 
         [FirestoreProperty]
         public string TrangThai { get; set; } = "";

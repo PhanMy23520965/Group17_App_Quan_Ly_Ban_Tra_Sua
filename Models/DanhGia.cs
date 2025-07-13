@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TraSuaApp.Models.Admin
+namespace Models
 {
     [FirestoreData]
     public class DanhGia
@@ -15,10 +15,10 @@ namespace TraSuaApp.Models.Admin
         public string ID { get; set; }
 
         [FirestoreProperty]
-        public string MaKH { get; set; } = "";
+        public DocumentReference MaKH { get; set; }
 
         [FirestoreProperty]
-        public string MaDH { get; set; } = "";
+        public DocumentReference MaDH { get; set; }
 
         [FirestoreProperty]
         public string NoiDung { get; set; } = "";

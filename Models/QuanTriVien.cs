@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Google.Cloud.Firestore;
-using TraSuaApp.Models.Admin;
+using Models;
 
-namespace Models.Admin
+namespace Models
 {
     [FirestoreData]
     public class QuanTriVien

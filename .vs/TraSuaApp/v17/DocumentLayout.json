@@ -1,34 +1,62 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\",
+  "WorkspaceRootPath": "D:\\Workspace\\School\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|TraSuaApp.csproj|d:\\hk4\\ltm\\group17_app_quan_ly_ban_tra_sua\\models\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|TraSuaApp.csproj|solutionrelative:models\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|TraSuaApp.csproj|d:\\workspace\\school\\hk4\\ltm\\group17_app_quan_ly_ban_tra_sua\\views\\admin\\uc_ban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|TraSuaApp.csproj|solutionrelative:views\\admin\\uc_ban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|ProjectNT106.csproj|D:\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\models\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|ProjectNT106.csproj|solutionrelative:models\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|TraSuaApp.csproj|d:\\workspace\\school\\hk4\\ltm\\group17_app_quan_ly_ban_tra_sua\\views\\admin\\uc_ban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|TraSuaApp.csproj|solutionrelative:views\\admin\\uc_ban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|TraSuaApp.csproj|d:\\hk4\\ltm\\group17_app_quan_ly_ban_tra_sua\\gui\\uc_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|TraSuaApp.csproj|solutionrelative:gui\\uc_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|TraSuaApp.csproj|d:\\workspace\\school\\hk4\\ltm\\group17_app_quan_ly_ban_tra_sua\\views\\admin\\uc_donhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|TraSuaApp.csproj|solutionrelative:views\\admin\\uc_donhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|ProjectNT106.csproj|D:\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\gui\\uc_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|ProjectNT106.csproj|solutionrelative:gui\\uc_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|TraSuaApp.csproj|d:\\workspace\\school\\hk4\\ltm\\group17_app_quan_ly_ban_tra_sua\\views\\account\\dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|TraSuaApp.csproj|solutionrelative:views\\account\\dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|ProjectNT106.csproj|D:\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|ProjectNT106.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|TraSuaApp.csproj|d:\\workspace\\school\\hk4\\ltm\\group17_app_quan_ly_ban_tra_sua\\views\\account\\dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|TraSuaApp.csproj|solutionrelative:views\\account\\dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|GD.csproj|D:\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\gui\\temp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|GD.csproj|solutionrelative:gui\\temp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|TraSuaApp.csproj|d:\\workspace\\school\\hk4\\ltm\\group17_app_quan_ly_ban_tra_sua\\views\\admin\\uc_khuyenmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|TraSuaApp.csproj|solutionrelative:views\\admin\\uc_khuyenmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|GD.csproj|D:\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\gui\\temp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|GD.csproj|solutionrelative:gui\\temp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|TraSuaApp.csproj|d:\\workspace\\school\\hk4\\ltm\\group17_app_quan_ly_ban_tra_sua\\views\\admin\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|TraSuaApp.csproj|solutionrelative:views\\admin\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|TraSuaApp.csproj|d:\\workspace\\school\\hk4\\ltm\\group17_app_quan_ly_ban_tra_sua\\views\\admin\\uc_donhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|TraSuaApp.csproj|solutionrelative:views\\admin\\uc_donhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|TraSuaApp.csproj|d:\\workspace\\school\\hk4\\ltm\\group17_app_quan_ly_ban_tra_sua\\views\\admin\\uc_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|TraSuaApp.csproj|solutionrelative:views\\admin\\uc_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|TraSuaApp.csproj|d:\\workspace\\school\\hk4\\ltm\\group17_app_quan_ly_ban_tra_sua\\views\\admin\\uc_lienhe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|TraSuaApp.csproj|solutionrelative:views\\admin\\uc_lienhe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|TraSuaApp.csproj|d:\\workspace\\school\\hk4\\ltm\\group17_app_quan_ly_ban_tra_sua\\views\\admin\\uc_adminprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|TraSuaApp.csproj|solutionrelative:views\\admin\\uc_adminprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|TraSuaApp.csproj|d:\\workspace\\school\\hk4\\ltm\\group17_app_quan_ly_ban_tra_sua\\views\\admin\\uc_adminprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|TraSuaApp.csproj|solutionrelative:views\\admin\\uc_adminprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|TraSuaApp.csproj|d:\\workspace\\school\\hk4\\ltm\\group17_app_quan_ly_ban_tra_sua\\views\\account\\quenmatkhau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|TraSuaApp.csproj|solutionrelative:views\\account\\quenmatkhau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|TraSuaApp.csproj|d:\\workspace\\school\\hk4\\ltm\\group17_app_quan_ly_ban_tra_sua\\views\\account\\quenmatkhau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62FAD64A-9DD7-43F5-AABF-089DC7F801C5}|TraSuaApp.csproj|solutionrelative:views\\account\\quenmatkhau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,86 +75,175 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SanPham.cs",
-              "DocumentMoniker": "D:\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\Models\\SanPham.cs",
-              "RelativeDocumentMoniker": "Models\\SanPham.cs",
-              "ToolTip": "D:\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\Models\\SanPham.cs",
-              "RelativeToolTip": "Models\\SanPham.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAzAAAA",
+              "Title": "UC_Ban.cs",
+              "DocumentMoniker": "D:\\Workspace\\School\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\Views\\Admin\\UC_Ban.cs",
+              "RelativeDocumentMoniker": "Views\\Admin\\UC_Ban.cs",
+              "ToolTip": "D:\\Workspace\\School\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\Views\\Admin\\UC_Ban.cs",
+              "RelativeToolTip": "Views\\Admin\\UC_Ban.cs",
+              "ViewState": "AQIAALkAAAAAAAAAAAAlwNoAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T10:19:57Z",
+              "WhenOpened": "2025-07-12T16:15:41.062Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAA7AAAA",
+              "DocumentIndex": 5,
+              "Title": "UC_KhuyenMai.cs [Design]",
+              "DocumentMoniker": "D:\\Workspace\\School\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\Views\\Admin\\UC_KhuyenMai.cs",
+              "RelativeDocumentMoniker": "Views\\Admin\\UC_KhuyenMai.cs",
+              "ToolTip": "D:\\Workspace\\School\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\Views\\Admin\\UC_KhuyenMai.cs [Design]",
+              "RelativeToolTip": "Views\\Admin\\UC_KhuyenMai.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T08:57:31.851Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SanPham.cs",
-              "DocumentMoniker": "D:\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\Models\\SanPham.cs",
-              "RelativeDocumentMoniker": "Models\\SanPham.cs",
-              "ToolTip": "D:\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\Models\\SanPham.cs",
-              "RelativeToolTip": "Models\\SanPham.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T09:09:24.057Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UC_Menu.cs",
-              "DocumentMoniker": "D:\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\GUI\\UC_Menu.cs",
-              "RelativeDocumentMoniker": "GUI\\UC_Menu.cs",
-              "ToolTip": "D:\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\GUI\\UC_Menu.cs",
-              "RelativeToolTip": "GUI\\UC_Menu.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAAAAwEYAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T08:46:58.897Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UC_Menu.cs [Design]",
-              "DocumentMoniker": "D:\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\GUI\\UC_Menu.cs",
-              "RelativeDocumentMoniker": "GUI\\UC_Menu.cs",
-              "ToolTip": "D:\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\GUI\\UC_Menu.cs [Design]",
-              "RelativeToolTip": "GUI\\UC_Menu.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T08:46:50.91Z",
+              "WhenOpened": "2025-07-12T15:28:03.618Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Temp.cs [Design]",
-              "DocumentMoniker": "D:\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\GUI\\Temp.cs",
-              "RelativeDocumentMoniker": "GUI\\Temp.cs",
-              "ToolTip": "D:\\HK4\\LTM\\DA\\GD\\GUI\\Temp.cs [Design]",
-              "RelativeToolTip": "..\\DA\\GD\\GUI\\Temp.cs [Design]",
+              "DocumentIndex": 1,
+              "Title": "UC_Ban.cs [Design]",
+              "DocumentMoniker": "D:\\Workspace\\School\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\Views\\Admin\\UC_Ban.cs",
+              "RelativeDocumentMoniker": "Views\\Admin\\UC_Ban.cs",
+              "ToolTip": "D:\\Workspace\\School\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\Views\\Admin\\UC_Ban.cs [Design]",
+              "RelativeToolTip": "Views\\Admin\\UC_Ban.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T13:26:21.564Z"
+              "WhenOpened": "2025-07-12T15:28:00.759Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UC_DonHang.cs",
+              "DocumentMoniker": "D:\\Workspace\\School\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\Views\\Admin\\UC_DonHang.cs",
+              "RelativeDocumentMoniker": "Views\\Admin\\UC_DonHang.cs",
+              "ToolTip": "D:\\Workspace\\School\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\Views\\Admin\\UC_DonHang.cs",
+              "RelativeToolTip": "Views\\Admin\\UC_DonHang.cs",
+              "ViewState": "AQIAAJ0AAAAAAAAAAAAmwJ4AAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T15:24:34.45Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Temp.cs",
-              "DocumentMoniker": "D:\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\GUI\\Temp.cs",
-              "RelativeDocumentMoniker": "GUI\\Temp.cs",
-              "ToolTip": "D:\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\GUI\\Temp.cs",
-              "RelativeToolTip": "GUI\\Temp.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAuwBUAAADuAAAA",
+              "Title": "Main.cs [Design]",
+              "DocumentMoniker": "D:\\Workspace\\School\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\Views\\Admin\\Main.cs",
+              "RelativeDocumentMoniker": "Views\\Admin\\Main.cs",
+              "ToolTip": "D:\\Workspace\\School\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\Views\\Admin\\Main.cs [Design]",
+              "RelativeToolTip": "Views\\Admin\\Main.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T14:13:59.993Z"
+              "WhenOpened": "2025-07-12T15:28:08.109Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Dangnhap.cs [Design]",
+              "DocumentMoniker": "D:\\Workspace\\School\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\Views\\Account\\Dangnhap.cs",
+              "RelativeDocumentMoniker": "Views\\Account\\Dangnhap.cs",
+              "ToolTip": "D:\\Workspace\\School\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\Views\\Account\\Dangnhap.cs [Design]",
+              "RelativeToolTip": "Views\\Account\\Dangnhap.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T13:44:33.641Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Dangnhap.cs",
+              "DocumentMoniker": "D:\\Workspace\\School\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\Views\\Account\\Dangnhap.cs",
+              "RelativeDocumentMoniker": "Views\\Account\\Dangnhap.cs",
+              "ToolTip": "D:\\Workspace\\School\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\Views\\Account\\Dangnhap.cs",
+              "RelativeToolTip": "Views\\Account\\Dangnhap.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAqwEkAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T13:58:07.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UC_DonHang.cs [Design]",
+              "DocumentMoniker": "D:\\Workspace\\School\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\Views\\Admin\\UC_DonHang.cs",
+              "RelativeDocumentMoniker": "Views\\Admin\\UC_DonHang.cs",
+              "ToolTip": "D:\\Workspace\\School\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\Views\\Admin\\UC_DonHang.cs [Design]",
+              "RelativeToolTip": "Views\\Admin\\UC_DonHang.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T15:24:33.114Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UC_LienHe.cs [Design]",
+              "DocumentMoniker": "D:\\Workspace\\School\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\Views\\Admin\\UC_LienHe.cs",
+              "RelativeDocumentMoniker": "Views\\Admin\\UC_LienHe.cs",
+              "ToolTip": "D:\\Workspace\\School\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\Views\\Admin\\UC_LienHe.cs [Design]",
+              "RelativeToolTip": "Views\\Admin\\UC_LienHe.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T15:28:04.638Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UC_Menu.cs [Design]",
+              "DocumentMoniker": "D:\\Workspace\\School\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\Views\\Admin\\UC_Menu.cs",
+              "RelativeDocumentMoniker": "Views\\Admin\\UC_Menu.cs",
+              "ToolTip": "D:\\Workspace\\School\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\Views\\Admin\\UC_Menu.cs [Design]",
+              "RelativeToolTip": "Views\\Admin\\UC_Menu.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T15:28:05.722Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UC_AdminProfile.cs",
+              "DocumentMoniker": "D:\\Workspace\\School\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\Views\\Admin\\UC_AdminProfile.cs",
+              "RelativeDocumentMoniker": "Views\\Admin\\UC_AdminProfile.cs",
+              "ToolTip": "D:\\Workspace\\School\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\Views\\Admin\\UC_AdminProfile.cs",
+              "RelativeToolTip": "Views\\Admin\\UC_AdminProfile.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAGAAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T14:52:26.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UC_AdminProfile.cs [Design]",
+              "DocumentMoniker": "D:\\Workspace\\School\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\Views\\Admin\\UC_AdminProfile.cs",
+              "RelativeDocumentMoniker": "Views\\Admin\\UC_AdminProfile.cs",
+              "ToolTip": "D:\\Workspace\\School\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\Views\\Admin\\UC_AdminProfile.cs [Design]",
+              "RelativeToolTip": "Views\\Admin\\UC_AdminProfile.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T14:52:25.599Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Quenmatkhau.cs",
+              "DocumentMoniker": "D:\\Workspace\\School\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\Views\\Account\\Quenmatkhau.cs",
+              "RelativeDocumentMoniker": "Views\\Account\\Quenmatkhau.cs",
+              "ToolTip": "D:\\Workspace\\School\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\Views\\Account\\Quenmatkhau.cs",
+              "RelativeToolTip": "Views\\Account\\Quenmatkhau.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGQAAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T13:41:03.858Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Quenmatkhau.cs [Design]",
+              "DocumentMoniker": "D:\\Workspace\\School\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\Views\\Account\\Quenmatkhau.cs",
+              "RelativeDocumentMoniker": "Views\\Account\\Quenmatkhau.cs",
+              "ToolTip": "D:\\Workspace\\School\\HK4\\LTM\\Group17_App_Quan_Ly_Ban_Tra_Sua\\Views\\Account\\Quenmatkhau.cs [Design]",
+              "RelativeToolTip": "Views\\Account\\Quenmatkhau.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T13:41:00.839Z",
+              "EditorCaption": " [Design]"
             }
           ]
         },

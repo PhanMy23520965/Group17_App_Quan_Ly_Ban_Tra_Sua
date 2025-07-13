@@ -1,6 +1,6 @@
 ﻿using Google.Cloud.Firestore;
 
-namespace Models.Admin
+namespace Models
 {
     [FirestoreData]
     public class ChiTietDonHang
@@ -19,9 +19,9 @@ namespace Models.Admin
         public int SoLuong { get; set; } = 0;
 
         [FirestoreProperty]
-        public string Size { get; set; } = "";
+        public string Size { get; set; } = "S";
 
         [FirestoreProperty]
-        public int ThanhTien { get; set; } = 0;
+        public double ThanhTien { get; set; } = 0;
     }
 }

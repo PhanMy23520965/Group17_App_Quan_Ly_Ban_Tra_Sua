@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TraSuaApp.Models.Admin
+namespace Models
 {
     [FirestoreData]
     public class KhuyenMai
@@ -24,10 +24,10 @@ namespace TraSuaApp.Models.Admin
         public DateTime NgayKetThuc { get; set; }
 
         [FirestoreProperty]
-        public int GiaToiThieu { get; set; } = 0; // Giá tối thiểu để nhận KM
+        public double GiaToiThieu { get; set; } = 0; // Giá tối thiểu để nhận KM
 
         [FirestoreProperty]
-        public int GiamToiDa { get; set; } = 0; // Tổng tiền tối đa có thể giảm
+        public double GiamToiDa { get; set; } = 0; // Tổng tiền tối đa có thể giảm
 
         [FirestoreProperty]
         public string NoiDung { get; set; } = "";

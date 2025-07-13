@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TraSuaApp.Models
+namespace Models
 {
     [FirestoreData]
     public class LienHe

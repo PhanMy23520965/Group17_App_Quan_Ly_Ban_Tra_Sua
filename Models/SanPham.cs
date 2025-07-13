@@ -2,7 +2,7 @@
 using System;
 using System.Diagnostics.CodeAnalysis;
 
-namespace Models.Admin
+namespace Models
 {
     [FirestoreData]
     public class SanPham 
@@ -15,7 +15,7 @@ namespace Models.Admin
         public string TenSP { get; set; } = "";
 
         [FirestoreProperty]
-        public int Gia { get; set; } = 0;
+        public double Gia { get; set; } = 0;
 
         [FirestoreProperty]
         public string LoaiSP { get; set; } = "";
